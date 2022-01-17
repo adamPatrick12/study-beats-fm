@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background: #eee;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+}
+
+iframe {
+   width: 100vw;
+   height: 100vh;
+}
+
+.blocker{
+  font-size: 20px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: transparent;
+}

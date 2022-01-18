@@ -170,6 +170,13 @@ html, body {
 .audioImgSize{
   width: 20px;
   height: 20px;
+  margin-left: 3px;
+  filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+}
+
+.audioImgSize2{
+  width: 20px;
+  height: 20px;
   margin-left: -1px;
   filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
 }
@@ -187,6 +194,19 @@ html, body {
 }
 
 .PlayPause{
+  border: #c7c7c7 1px solid;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.PlayPause2{
   border: #c7c7c7 1px solid;
   height: 100px;
   width: 100px;
@@ -256,6 +276,13 @@ html, body {
 .playBtn{
   width: 30px;
   height: 30px;
-  margin-left: 6px;
+  margin-left: 2px;
+  filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+}
+
+.playBtn2{
+  width: 30px;
+  height: 30px;
+  margin-left: 2px;
   filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
 }

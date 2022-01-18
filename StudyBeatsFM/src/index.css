@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -15,11 +15,13 @@ html, body {
     width: 100vw;
     overflow: hidden;
     position: absolute;
-}
+    object-fit: cover;
+} */
 
-iframe {
-   width: 100vw;
-   height: 100vh;
+/* iframe {
+   background-size: cover;
+   background-position: fixed;
+   size: fullscreen;
 }
 
 .blocker{
@@ -28,4 +30,29 @@ iframe {
   height: 100vh;
   position: absolute;
   background-color: transparent;
+} */
+
+
+html, body {
+  width: 100%; 
+  height:100%; 
+  overflow:hidden;
+}
+
+#vid{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  z-index: -1000; 
+  overflow: hidden;
+}
+
+.play{
+  margin-left: 40rem;
 }

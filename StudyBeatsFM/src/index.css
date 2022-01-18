@@ -24,16 +24,15 @@ html, body {
   height: 97vh;
   display: flex;
   border: 10px red solid;
-  justify-content: space-around;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .radioContainer{
   display: flex;
   flex-direction: column;
   border: 5px solid white;
-  margin-right: 30px;
-  width: 25vw;
+  width: 15vw;
 }
 
 .radioStations{
@@ -86,7 +85,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  margin-right: 30px;
+  
 }
 
 .timer{
@@ -100,12 +99,12 @@ html, body {
 
 .audioControlContainer{
   height: 100%;
-  width: 26vw;
+  width: 40vw;
   border: white 5px solid;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  margin-right: 30px;
+  margin-left: -20px;
 }
 
 .audioControl{
@@ -115,6 +114,10 @@ html, body {
   text-align: center;
   font-size: 3rem;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .songName{
@@ -148,6 +151,111 @@ html, body {
   display: flex;
   flex-direction: column;
   border: 5px solid white;
-  margin-right: 30px;
   width: 25vw;
+}
+
+.goBackBtn{
+  border: #c7c7c7 1px solid;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 3.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.audioImgSize{
+  width: 20px;
+  height: 20px;
+  margin-left: -1px;
+  filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+}
+
+.goFowardBtn{
+  border: #c7c7c7 1px solid;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 3.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;margin-left: 6px;
+  margin-right: 6px;
+}
+
+.PlayPause{
+  border: #c7c7c7 1px solid;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.volume{
+  border: #c7c7c7 1px solid;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 3.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;margin-left: 6px;
+  margin-right: 6px;
+}
+
+.volumeDial{
+  border: #c7c7c7 1px solid;
+  height: 1px;
+  -webkit-appearance: none;
+  width: 100px;
+  margin-top: 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;margin-left: 6px;
+  margin-left: 3px;
+  border-radius: 30px;
+  background-color: #C0C0C0;
+}
+
+.volumeDial:hover{
+  background-color: white;
+}
+
+.volumeDial::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #c7c7c7; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+.volumeDial::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #c7c7c7;
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+}
+
+.volumeDial::-webkit-slider-thumb:hover{
+  background-color: white;
+}
+
+.playBtn{
+  width: 30px;
+  height: 30px;
+  margin-left: 6px;
+  filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
 }

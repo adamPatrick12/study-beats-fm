@@ -1,31 +1,37 @@
 import './styles/index.css'
 import './styles/audioControl.css'
 import {useEffect, useState} from 'react'
-// import RadioList from './components/radioList'
 import AudioControl from './components/audioControls'
 import PomodoroTimer from './components/pomodoroTimer'
 import AdditionSettings from './components/additionalInfo'
-// import BackgroundVideo from './components/backgroundVideo'
 import sythnWave from './Videos/Electronic-Gems.mp4'
 import LofiGirl from './Videos/LofiGirl.mp4'
 import triangle from './images/playBtn.png'
-
+import synth from './Music/Synthwave.mp3'
+import home from  './Music/HOME - Resonance.mp3'
+import ElectronicGemsRadio from './RadioStation/ElectronicGems'
+import LofiGirlRadio from './RadioStation/LofiGirl'
 
 function App() {
   
+  const [change, setChange] = useState(false)
+  const [radio, radioChange] = useState('retro')
+  const [radioPlaylist, setRadioPlaylist] = useState(ElectronicGemsRadio(radio))
   const [video, setVideo] = useState(sythnWave)
 
- 
 
   const reloadVideo = () => {
     let backGroundVideo = document.getElementById('vid');
     backGroundVideo.pause();
     backGroundVideo.load()
+    radioChange('Lofi')
+    setChange(true)
   }
 
-  const LofiGirlRadio = () =>{
+  const LofiGirlVideo = () =>{
     setVideo(LofiGirl)
     reloadVideo()
+    
   }
  
   return (
@@ -43,7 +49,7 @@ function App() {
             </div>
             <div className="radioStations">
               <div className="station">
-              <img onClick={LofiGirlRadio} className="triangle" src={triangle} alt="" />
+              <img onClick={LofiGirlVideo} className="triangle" src={triangle} alt="" />
                  Lofi Girl
               </div>
               <div className="station">
@@ -53,7 +59,7 @@ function App() {
             </div>
         </div>
           <PomodoroTimer/>
-          <AudioControl/>
+          <AudioControl change = {change} song = {ElectronicGemsRadio(radio)}/>
           <AdditionSettings/>
           <video id="vid" autoPlay loop muted>
           <source id="mp4" src= {video}  type="video/mp4"/>

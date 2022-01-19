@@ -12,12 +12,10 @@ import mute from '../images/mute.png'
 let lastPlayedVolume
 
 
-const AudioControl = () => {
+const AudioControl = (props) => {
     
-  let audio = new Audio(synth)
-  let audio2 = new Audio(home)
-  let audio3 = new Audio(synth)
-
+  
+  const [change, handleChange] = useState(props.change)
   const [BtnClass, setBtnClass] = useState("PlayPause")           //pause play change
   const [BtnClass2, setBtnClass2] = useState("playBtn")
   const [playPauseImg, setPlayPause] = useState(play)
@@ -29,13 +27,13 @@ const AudioControl = () => {
 
   
   const [songIndex, setSongIndex] = useState(0)
-  const [song] = useState([audio, audio2, audio3])
+  const [song, setRadio] = useState(props.song)
   const [songChangeCheck, setSongChange] = useState(false)
   const [volume, setVolume] = useState(1)
-  const [VolumeThumb, setVolumeThumb] = useState(volume)
- 
+  
   song[songIndex].volume = volume   // Volume checker
 
+    
     const handlePausePlaySwitch = (e) => {
         let className = e.target.className
         console.log(className)
@@ -106,9 +104,13 @@ const previousSong = () => {
   stopPlayingLastSong()
  }
 
-useEffect(() => {
+useEffect(() => {       //handle song change 
   start()
 },[songIndex])
+
+useEffect(() => {
+    console.log(change)
+  },[change])
     
     return (
         <div className="audioControlContainer">

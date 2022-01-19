@@ -13,11 +13,19 @@ import triangle from './images/playBtn.png'
 
 function App() {
   
-  const [video2, setVideo] = useState(sythnWave)
+  const [video, setVideo] = useState(sythnWave)
+
+ 
+
+  const reloadVideo = () => {
+    let backGroundVideo = document.getElementById('vid');
+    backGroundVideo.pause();
+    backGroundVideo.load()
+  }
 
   const LofiGirlRadio = () =>{
     setVideo(LofiGirl)
-    
+    reloadVideo()
   }
  
   return (

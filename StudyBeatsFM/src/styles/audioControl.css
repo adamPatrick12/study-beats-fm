@@ -56,6 +56,9 @@
     filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
   }
   
+  .audioOffImg{
+    filter: invert(93%) sepia(19%) saturate(2348%) hue-rotate(296deg) brightness(102%) contrast(103%);
+  }
   
   .goFowardBtn{
     border: #c7c7c7 1px solid;
@@ -82,6 +85,9 @@
     margin-right: 6px;
   }
   
+  .PlayPause:hover, .PlayPause2:hover {
+    border: rgb(255, 255, 255) 1px solid;
+  }
   
   
   
@@ -96,6 +102,7 @@
     justify-content: center;margin-left: 6px;
     margin-right: 6px;
   }
+  
   
   .volumeDial{
     border: #c7c7c7 1px solid;
@@ -149,6 +156,6 @@
   .playBtn2{
     width: 30px;
     height: 30px;
-    margin-left: 2px;
+    margin-left: 0px;
     filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
   }

@@ -33,15 +33,16 @@ html, body {
 .radioContainer{
   display: flex;
   flex-direction: column;
-  border: 5px solid white;
   width: 15vw;
 }
 
-.radioStations{
+.radioStationsContainer{
   width: 99%;
   height: 70%;
-  border: 5px white solid;
+  box-shadow: 1px 0px 0 white;
   text-align: center;
+  display: flex;
+  justify-content: end;
 }
 
 .radioControl{
@@ -53,7 +54,13 @@ html, body {
   color: white;
 }
 
-
+.radioList{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: 3px;
+}
 
 .logo{
   width: 99%;
@@ -92,27 +99,28 @@ html, body {
 }
 
 .station{
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
-  margin-right: 50px;
   font-weight: 400;
   color: #c0C0C0;
   text-transform: uppercase;
   margin-top: 10px;
   text-shadow: 1px 1px rgb(0 0 0 / 70%);
+  cursor: pointer;
 }
 
 .triangle{
-  width: 10px;
-  height: 10px;
-  padding-right: 10px;
+  width: 12px;
+  height: 14px;
+  padding-right: 12px;
   filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+  cursor:pointer;
 }
+
 
 .pomodoroTimerContainer{
   width: 15vw;
   height: 99%;
-  border: 5px white solid;
   text-align: center;
   font-size: 3rem;
   color: white;

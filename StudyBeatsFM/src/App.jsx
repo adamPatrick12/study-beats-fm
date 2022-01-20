@@ -6,7 +6,11 @@ import AdditionSettings from './components/additionalInfo'
 import sythnWave from './Videos/Electronic-Gems.mp4'
 import DreamsScape from './Videos/DreamsScape.mp4'
 import LofiGirl from './Videos/LofiGirl.mp4'
+import TheJazzHopCafe from './Videos/TheJazzHopCafe.mp4'
+import ChilledCow from './Videos/ChilledCow.mp4'
+import AstralThrob from './Videos/AstralThrob.mp4'
 import HFiveGOne from './Videos/H5G1Music.mp4'
+import fantastic from './Videos/fantastic.mp4'
 import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
@@ -177,6 +181,27 @@ function App() {
     handleRadioChange()
   }
 
+  const Fantastic = () => {
+    setVideo(fantastic)
+    handleRadioChange()
+  }
+
+  const astralThrob = () => {
+    setVideo(AstralThrob)
+    handleRadioChange()
+  }
+
+  const chilledCow = () => {
+    setVideo(ChilledCow)
+    handleRadioChange()
+  }
+
+  const theJazzHopCafe = () => {
+    setVideo(TheJazzHopCafe)
+    handleRadioChange()
+  }
+
+
 
   return (
 
@@ -198,6 +223,7 @@ function App() {
           <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
+            onClick={astralThrob}
             className="station">
               <img className="triangle" src={triangle} alt="" />
               Astral Throb
@@ -215,6 +241,7 @@ function App() {
             <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
+            onClick={chilledCow}
             className="station">
               <img className="triangle" src={triangle} alt="" />
               Chilled Cow
@@ -249,7 +276,8 @@ function App() {
             <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
-            className="station">
+            className="station"
+            onClick={Fantastic}>
               <img className="triangle" src={triangle} alt="" />
               Fantastic
             </motion.div>
@@ -286,6 +314,15 @@ function App() {
             className="station">
               <img className="triangle" src={triangle} alt="" />
               The Bootleg Boy
+            </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={theJazzHopCafe}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              The Jazz Café
             </motion.div>
 
 

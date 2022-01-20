@@ -108,6 +108,10 @@ html, body {
   cursor: pointer;
 }
 
+.station:hover{
+  color: white;
+}
+
 .triangle{
   width: 12px;
   height: 14px;

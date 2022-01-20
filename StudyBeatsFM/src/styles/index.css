@@ -24,7 +24,6 @@ html, body {
   width: 98%;
   height: 97vh;
   display: flex;
-  border: 10px red solid;
   flex-direction: row;
   justify-content: space-between;
  
@@ -104,7 +103,7 @@ html, body {
   font-weight: 400;
   color: #c0C0C0;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 15px;
   text-shadow: 1px 1px rgb(0 0 0 / 70%);
   cursor: pointer;
 }

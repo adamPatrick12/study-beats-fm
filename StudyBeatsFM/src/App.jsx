@@ -4,7 +4,10 @@ import { useEffect, useState } from 'react'
 import PomodoroTimer from './components/pomodoroTimer'
 import AdditionSettings from './components/additionalInfo'
 import sythnWave from './Videos/Electronic-Gems.mp4'
+import DreamsScape from './Videos/DreamsScape.mp4'
 import LofiGirl from './Videos/LofiGirl.mp4'
+import HFiveGOne from './Videos/H5G1Music.mp4'
+import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import LofiGirlRadio from './RadioStation/LofiGirl'
@@ -159,6 +162,22 @@ function App() {
     setStation(ElectronicGemsRadio)
   }
 
+  const DreamscapeVideo = () => {
+    setVideo(DreamsScape)
+    handleRadioChange()
+  }
+
+  const ChillHiphop = () => {
+    setVideo(ChillHipHop)
+    handleRadioChange()
+  }
+
+  const HFiveGOneFunc = () => {
+    setVideo(HFiveGOne)
+    handleRadioChange()
+  }
+
+
   return (
 
 
@@ -175,14 +194,24 @@ function App() {
         </div>
         <div className="radioStationsContainer">
           <div className='radioList'>
-            <motion.div 
-             whileHover={{ scale: 1.09 }}
-             whileTap={{ scale: 0.9 }}
-             onClick={LofiGirlVideo}
+            
+          <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
             className="station">
-              <img  className="triangle" src={triangle} alt="" />
-               <span> Lofi Girl </span> 
+              <img className="triangle" src={triangle} alt="" />
+              Astral Throb
             </motion.div>
+            
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={ChillHiphop}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              ChillHop Music
+            </motion.div>
+            
             <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
@@ -190,6 +219,24 @@ function App() {
               <img className="triangle" src={triangle} alt="" />
               Chilled Cow
             </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              CloudHop Music
+            </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={DreamscapeVideo}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              DreamScape
+            </motion.div>
+
             <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
@@ -198,6 +245,50 @@ function App() {
               <img  className="triangle" src={triangle} alt="" />
              Electronic Gems 
             </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              Fantastic
+            </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={HFiveGOneFunc}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              H5G1 Music
+            </motion.div>
+
+            <motion.div 
+             whileHover={{ scale: 1.09 }}
+             whileTap={{ scale: 0.9 }}
+             onClick={LofiGirlVideo}
+            className="station">
+              <img  className="triangle" src={triangle} alt="" />
+               <span> Lofi Girl </span> 
+            </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              STEEZYASFUCK
+            </motion.div>
+
+            <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              The Bootleg Boy
+            </motion.div>
+
+
           </div>
         </div>
       </div>

@@ -176,7 +176,7 @@ function App() {
   const DreamscapeVideo = () => {
     setVideo(DreamsScape)
     handleRadioChange()
-    setStationName("DreamsScape")
+    setStationName("DreamScape")
   }
 
   const ChillHiphop = () => {

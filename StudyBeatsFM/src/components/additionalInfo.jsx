@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react'
 import RainASMR from '../Sounds/rain.mp3'
 import OceanASMR from '../Sounds/Ocean.mp3'
 import waves from '../images/waves.png'
+import youtube from '../images/youtube.png'
 import WhiteNoise from '../images/whiteNoise.png'
 import { motion } from "framer-motion"
 
 const Rain = new Audio(RainASMR)
 const Ocean = new Audio(OceanASMR)
-let change = true;
 
 const AdditionSettings = (props) => {
 
@@ -32,7 +32,7 @@ const AdditionSettings = (props) => {
     }    
 
     setTimeout(function(){
-        setTransitionValue(-350)     //Title Pop in and out
+        setTransitionValue(-450)     //Title Pop in and out
         setTitleLocation(420)
       }, 2000);
     
@@ -45,7 +45,7 @@ const AdditionSettings = (props) => {
     return (
         <div className="infoContainer">
             <div className="time">
-                Time
+               
             </div>
             <div 
             className="songName">
@@ -57,7 +57,12 @@ const AdditionSettings = (props) => {
                style = {{left: TitleLocation}}
                >
                {props.radio}
+               <div className="socialsContainer">           
+                <img src={youtube} className="socialIcons" alt="" />            
+               </div>
                </motion.div>
+              
+               
             </div>
             <div className="otherSoundsContainer">
                 <div className="allign">

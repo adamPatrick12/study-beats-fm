@@ -2,22 +2,28 @@ import React from "react";
 import rain from '../images/rain.png'
 import { useEffect, useState } from 'react'
 import RainASMR from '../Sounds/rain.mp3'
+import OceanASMR from '../Sounds/Ocean.mp3'
+import waves from '../images/waves.png'
+import WhiteNoise from '../images/whiteNoise.png'
+
+const Rain = new Audio(RainASMR)
+const Ocean = new Audio(OceanASMR)
 
 const AdditionSettings = () => {
-   
-    const Rain = new Audio(RainASMR)
 
-    const [rainVolume, setRainVolume] = useState(0.2)
+    const [rainVolume, setRainVolume] = useState(0)
+    const [oceanVolume, setOceanVolume] = useState(0)
+    const [whiteNoiseVolume, setWhiteNoiseVolume] = useState(0)
 
-    const playRain = () =>{
-        Rain.play()
-    }
-    
-    Rain.volume = rainVolume  
+    Ocean.volume = oceanVolume
+    Rain.volume = rainVolume
 
-    useEffect(() => {       //handle song change 
-       
-      }, [])
+    Rain.play()
+    Ocean.play()
+
+    useEffect(() => {
+
+    }, [])
 
 
     return (
@@ -26,36 +32,60 @@ const AdditionSettings = () => {
                 Time
             </div>
             <div className="songName">
-               Song Name
+                Song Name
             </div>
             <div className="otherSoundsContainer">
-               <div onClick = {playRain}className="allign">
-               <input className="rainDial"
-              type="range"
-              orient="vertical"
-              min={0}
-              max={1}
-              value={rainVolume}
-              onChange={event => {
-                setRainVolume(event.target.valueAsNumber)
-              }}
-              step={0.01}
-              
-            />
-               <div className="otherSounds">
-                   <img src={rain} className = "imgSizing" alt="" />
-               </div>
-               <div>
-               
-               </div>
-               
-               </div>
-               <div className="otherSounds">
-                   
-               </div>
-               <div className="otherSounds">
-                   
-               </div>
+                <div className="allign">
+                    <input className="soundDial"
+                        type="range"
+                        orient="vertical"
+                        min={0}
+                        max={1}
+                        value={rainVolume}
+                        onChange={event => {
+                            setRainVolume(event.target.valueAsNumber)
+                        }}
+                        step={0.2}
+
+                    />
+                    <div className="otherSounds">
+                        <img src={rain} className="imgSizing" alt="" />
+                    </div>
+                </div>
+                <div className="allign">
+                    <input className="soundDial"
+                        type="range"
+                        orient="vertical"
+                        min={0}
+                        max={1}
+                        value={oceanVolume}
+                        onChange={event => {
+                            setOceanVolume(event.target.valueAsNumber)
+                        }}
+                        step={0.2}
+
+                    />
+                    <div className="otherSounds">
+                        <img src={waves} className="imgSizing" alt="" />
+                    </div>
+                </div>
+                <div className="allign">
+                    <input className="soundDial"
+                        type="range"
+                        orient="vertical"
+                        min={0}
+                        max={1}
+                        value={oceanVolume}
+                        onChange={event => {
+                            setOceanVolume(event.target.valueAsNumber)
+                        }}
+                        step={0.2}
+
+                    />
+                    <div className="otherSounds">
+                        <img src={WhiteNoise} className="imgSizing" alt="" />
+                    </div>
+                </div>
             </div>
         </div>
     )

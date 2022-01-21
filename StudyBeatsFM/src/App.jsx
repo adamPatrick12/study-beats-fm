@@ -97,6 +97,8 @@ function App() {
     pause()
     setSongIndex(0)
     setPlayPause(pauseImg)
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
 
   const start = () => {
@@ -366,7 +368,7 @@ function App() {
             <img src={skipFoward} className="audioImgSize" alt="" />
           </motion.div>
           <motion.div
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.9 }}
           onClick={handlePausePlaySwitch} className={BtnClass}>
             <img src={playPauseImg} className={BtnClass2} alt="" />

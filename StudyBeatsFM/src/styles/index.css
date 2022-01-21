@@ -166,26 +166,25 @@ html, body {
 .infoContainer{
   display: flex;
   flex-direction: column;
-  border: 5px solid white;
   width: 15vw;
 }
 
 .otherSoundsContainer{
   width: 100%;
   height: 10%;
-  border: 5px white solid;
   text-align: center;
   font-size: 3rem;
   color: white;
   display: flex;
   flex-direction: row;
+  justify-content: end;
 }
 
 .otherSounds{
-  border: #c7c7c7 1px solid;
   min-height: 40px;
   min-width: 40px;
   border-radius: 50%;
+  border: #c7c7c7 1px solid;
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -201,21 +200,42 @@ html, body {
     filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
 }
 
+.soundDial{
+  display: none;
+}
+
 input[type=range][orient=vertical]
 {
     writing-mode: bt-lr; /* IE */
-    width: 30px;
+    width: 50px;
     height: 1px;
-    padding: 0 5px;
     -webkit-appearance: none;
     margin-bottom: 10px;
-    margin-left: 5px;
+    margin-left: 0px;
     background-color: #C0C0C0;
+    border-radius: 3px;
     border: #c7c7c7 1px solid;
     transform: rotate(270deg);
+}
+
+.soundDial::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #c7c7c7;
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
 }
 
 .allign{
   display: flex;
   flex-direction: column;
+  height: 100px;
+  justify-content: end;
+}
+
+.allign:hover .soundDial{
+  display: block;
 }

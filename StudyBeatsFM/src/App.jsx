@@ -39,9 +39,10 @@ function App() {
   const [volumeImg, setVolumeImg] = useState(volumeOn)
 
 
+  const [stationName, setStationName] = useState("Electronic Gems")
 
   const [songIndex, setSongIndex] = useState(0)
-  const [song, setStation] = useState(ElectronicGemsRadio)
+  const [song, setStation] = useState(ElectronicGemsRadio)     //station 
   const [songChangeCheck, setSongChange] = useState(false)
   const [volume, setVolume] = useState(1)
 
@@ -162,28 +163,33 @@ function App() {
     setVideo(LofiGirl)
     handleRadioChange()
     setStation(LofiGirlRadio)
+    setStationName("LofiGirl")
   }
 
   const ElectronicGemsVideo = () => {
     setVideo(sythnWave)
     handleRadioChange()
     setStation(ElectronicGemsRadio)
+    setStationName("Electronic Gems")
   }
 
   const DreamscapeVideo = () => {
     setVideo(DreamsScape)
     handleRadioChange()
+    setStationName("DreamsScape")
   }
 
   const ChillHiphop = () => {
     setVideo(ChillHipHop)
     handleRadioChange()
+    setStationName("ChillHop Music")
   }
 
   const HFiveGOneFunc = () => {
     setVideo(HFiveGOne)
     handleRadioChange()
     setStation(H5G1Radio)
+    setStationName("H5G1 Music")
   }
 
   const Fantastic = () => {
@@ -194,26 +200,31 @@ function App() {
   const astralThrob = () => {
     setVideo(AstralThrob)
     handleRadioChange()
+    setStationName("Astral Throb")
   }
 
   const chilledCow = () => {
     setVideo(ChilledCow)
     handleRadioChange()
+    setStationName("Chilled Cow")
   }
 
   const theJazzHopCafe = () => {
     setVideo(TheJazzHopCafe)
     handleRadioChange()
+    setStationName("theJazz Cafe")
   }
 
   const CloudHop = () => {
     setVideo(cloudHop)
     handleRadioChange()
+    setStationName("CloudHop")
   }
 
   const animeVibe = () => {
     setVideo(AnimeVibe)
     handleRadioChange()
+    setStationName("AnimeVibe")
   }
 
 
@@ -395,7 +406,7 @@ function App() {
 
 
       </div>
-      <AdditionSettings />
+      <AdditionSettings radio = {stationName}/>
       <video id="vid" autoPlay loop muted>
         <source id="mp4" src={video} type="video/mp4" />
       </video>

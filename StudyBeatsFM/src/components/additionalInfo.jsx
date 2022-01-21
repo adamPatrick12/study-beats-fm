@@ -5,15 +5,20 @@ import RainASMR from '../Sounds/rain.mp3'
 import OceanASMR from '../Sounds/Ocean.mp3'
 import waves from '../images/waves.png'
 import WhiteNoise from '../images/whiteNoise.png'
+import { motion } from "framer-motion"
 
 const Rain = new Audio(RainASMR)
 const Ocean = new Audio(OceanASMR)
+let change = true;
 
-const AdditionSettings = () => {
+const AdditionSettings = (props) => {
 
     const [rainVolume, setRainVolume] = useState(0)
     const [oceanVolume, setOceanVolume] = useState(0)
     const [whiteNoiseVolume, setWhiteNoiseVolume] = useState(0)
+
+    const [transitionValue, setTransitionValue] = useState(0)
+    const [TitleLocation, setTitleLocation] = useState(350)
 
     Ocean.volume = oceanVolume
     Rain.volume = rainVolume
@@ -21,9 +26,20 @@ const AdditionSettings = () => {
     Rain.play()
     Ocean.play()
 
-    useEffect(() => {
+ 
+    const setTransition = () => {
+        setTransitionValue(0)
+    }    
 
-    }, [])
+    setTimeout(function(){
+        setTransitionValue(-350)     //Title Pop in and out
+        setTitleLocation(420)
+      }, 2000);
+    
+    useEffect(() => {
+        setTransition()
+        setTitleLocation(1000)
+    }, [props.radio])
 
 
     return (
@@ -31,8 +47,17 @@ const AdditionSettings = () => {
             <div className="time">
                 Time
             </div>
-            <div className="songName">
-                Song Name
+            <div 
+            className="songName">
+          
+              <motion.div
+               animate={{ x: transitionValue }}
+               transition={{ delay: 1 }} 
+               className="radioStationTitle"
+               style = {{left: TitleLocation}}
+               >
+               {props.radio}
+               </motion.div>
             </div>
             <div className="otherSoundsContainer">
                 <div className="allign">

@@ -26,7 +26,7 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
- 
+
 }
 
 .radioContainer{
@@ -150,6 +150,9 @@ html, body {
   text-align: center;
   font-size: 3rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 
@@ -166,7 +169,7 @@ html, body {
 .infoContainer{
   display: flex;
   flex-direction: column;
-  width: 15vw;
+  min-width: 20vw;
 }
 
 .otherSoundsContainer{
@@ -238,4 +241,17 @@ input[type=range][orient=vertical]
 
 .allign:hover .soundDial{
   display: block;
+}
+
+.radioStationTitle{
+  font-size: 32px;
+  width: min-content;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  position: relative;
+  border-bottom: 1px white solid;
+  margin-bottom: 20px;
 }

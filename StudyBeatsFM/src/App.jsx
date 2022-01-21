@@ -1,7 +1,6 @@
 import './styles/index.css'
 import './styles/audioControl.css'
 import { useEffect, useState } from 'react'
-import PomodoroTimer from './components/pomodoroTimer'
 import AdditionSettings from './components/additionalInfo'
 import sythnWave from './Videos/Electronic-Gems.mp4'
 import DreamsScape from './Videos/DreamsScape.mp4'
@@ -9,12 +8,15 @@ import LofiGirl from './Videos/LofiGirl.mp4'
 import TheJazzHopCafe from './Videos/TheJazzHopCafe.mp4'
 import ChilledCow from './Videos/ChilledCow.mp4'
 import AstralThrob from './Videos/AstralThrob.mp4'
+import AnimeVibe from './Videos/AnimeVibe.mp4'
 import HFiveGOne from './Videos/H5G1Music.mp4'
+import cloudHop from './Videos/cloudHop.mp4'
 import fantastic from './Videos/fantastic.mp4'
 import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import LofiGirlRadio from './RadioStation/LofiGirl'
+import H5G1Radio from './RadioStation/H5G1'
 import play from './images/playBtn.png'
 import pauseImg from './images/pause.png'
 import skipBack from './images/skipBack.png'
@@ -179,6 +181,7 @@ function App() {
   const HFiveGOneFunc = () => {
     setVideo(HFiveGOne)
     handleRadioChange()
+    setStation(H5G1Radio)
   }
 
   const Fantastic = () => {
@@ -201,6 +204,15 @@ function App() {
     handleRadioChange()
   }
 
+  const CloudHop = () => {
+    setVideo(cloudHop)
+    handleRadioChange()
+  }
+
+  const animeVibe = () => {
+    setVideo(AnimeVibe)
+    handleRadioChange()
+  }
 
 
   return (
@@ -221,6 +233,15 @@ function App() {
           <div className='radioList'>
             
           <motion.div 
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={animeVibe}
+            className="station">
+              <img className="triangle" src={triangle} alt="" />
+              Anime Vibe
+            </motion.div>
+         
+         <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
             onClick={astralThrob}
@@ -250,6 +271,7 @@ function App() {
             <motion.div 
             whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.9 }}
+            onClick={CloudHop}
             className="station">
               <img className="triangle" src={triangle} alt="" />
               CloudHop Music
@@ -329,7 +351,6 @@ function App() {
           </div>
         </div>
       </div>
-      <PomodoroTimer />
       <div className="audioControlContainer">
         <div className="audioControl">
           <motion.div 
@@ -365,7 +386,6 @@ function App() {
               step={0.01}
               onChange={event => {
                 setVolume(event.target.valueAsNumber)
-
               }}
             />
           </div>

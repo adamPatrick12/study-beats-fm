@@ -16,6 +16,7 @@ import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import AnimeVibeStation from './RadioStation/AnimeVibe'
+import AstralThrobRadio from './RadioStation/AstralThrob'
 import LofiGirlRadio from './RadioStation/LofiGirl'
 import H5G1Radio from './RadioStation/H5G1'
 import play from './images/playBtn.png'
@@ -202,6 +203,7 @@ function App() {
     setVideo(AstralThrob)
     handleRadioChange()
     setStationName("Astral Throb")
+    setStation(AstralThrobRadio)
   }
 
   const chilledCow = () => {

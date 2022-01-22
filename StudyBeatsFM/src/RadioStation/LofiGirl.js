@@ -1,4 +1,4 @@
-import SweetLook from '../Music/SweetLook.mp3'
+import SweetLook from '../Music/LofiGirl/SweetLook.mp3'
 
 
 export const LofiGirlRadio = 

@@ -15,6 +15,7 @@ import fantastic from './Videos/fantastic.mp4'
 import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
+import AnimeVibeStation from './RadioStation/AnimeVibe'
 import LofiGirlRadio from './RadioStation/LofiGirl'
 import H5G1Radio from './RadioStation/H5G1'
 import play from './images/playBtn.png'
@@ -224,6 +225,7 @@ function App() {
   const animeVibe = () => {
     setVideo(AnimeVibe)
     handleRadioChange()
+    setStation(AnimeVibeStation)
     setStationName("AnimeVibe")
   }
 

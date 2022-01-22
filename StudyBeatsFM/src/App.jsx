@@ -240,122 +240,122 @@ function App() {
           StudyBeats
         </div>
         <div className="subHeading">
-      
+
         </div>
         <div className="radioStationsContainer">
           <div className='radioList'>
-            
-          <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={animeVibe}
-            className="station">
+
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={animeVibe}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               Anime Vibe
             </motion.div>
-         
-         <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={astralThrob}
-            className="station">
+
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={astralThrob}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               Astral Throb
             </motion.div>
-            
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={ChillHiphop}
-            className="station">
+
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={ChillHiphop}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               ChillHop Music
             </motion.div>
-            
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={chilledCow}
-            className="station">
+
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={chilledCow}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               Chilled Cow
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={CloudHop}
-            className="station">
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={CloudHop}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               CloudHop Music
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={DreamscapeVideo}
-            className="station">
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={DreamscapeVideo}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               DreamScape
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={ElectronicGemsVideo}
-            className="station">
-              <img  className="triangle" src={triangle} alt="" />
-             Electronic Gems 
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={ElectronicGemsVideo}
+              className="station">
+              <img className="triangle" src={triangle} alt="" />
+              Electronic Gems
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            className="station"
-            onClick={Fantastic}>
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              className="station"
+              onClick={Fantastic}>
               <img className="triangle" src={triangle} alt="" />
               Fantastic
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={HFiveGOneFunc}
-            className="station">
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={HFiveGOneFunc}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               H5G1 Music
             </motion.div>
 
-            <motion.div 
-             whileHover={{ scale: 1.09 }}
-             whileTap={{ scale: 0.9 }}
-             onClick={LofiGirlVideo}
-            className="station">
-              <img  className="triangle" src={triangle} alt="" />
-               <span> Lofi Girl </span> 
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={LofiGirlVideo}
+              className="station">
+              <img className="triangle" src={triangle} alt="" />
+              <span> Lofi Girl </span>
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            className="station">
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               STEEZYASFUCK
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            className="station">
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               The Bootleg Boy
             </motion.div>
 
-            <motion.div 
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={theJazzHopCafe}
-            className="station">
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={theJazzHopCafe}
+              className="station">
               <img className="triangle" src={triangle} alt="" />
               The Jazz Café
             </motion.div>
@@ -366,28 +366,28 @@ function App() {
       </div>
       <div className="audioControlContainer">
         <div className="audioControl">
-          <motion.div 
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={previousSong} className="goBackBtn">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={previousSong} className="goBackBtn">
             <img className="audioImgSize2" src={skipBack} alt="" />
           </motion.div>
-          <motion.div 
-           whileHover={{ scale: 1.1 }}
-           whileTap={{ scale: 0.9 }}
-          onClick={nextSong} className="goFowardBtn">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={nextSong} className="goFowardBtn">
             <img src={skipFoward} className="audioImgSize" alt="" />
           </motion.div>
           <motion.div
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={handlePausePlaySwitch} className={BtnClass}>
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={handlePausePlaySwitch} className={BtnClass}>
             <img src={playPauseImg} className={BtnClass2} alt="" />
           </motion.div>
-          <motion.div 
-           whileHover={{ scale: 1.09 }}
-           whileTap={{ scale: 0.9 }}
-           onClick={handleMute} className={muteCheck}>
+          <motion.div
+            whileHover={{ scale: 1.09 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={handleMute} className={muteCheck}>
             <img className={muteCheck2} src={volumeImg} alt="" />
           </motion.div>
           <div >
@@ -406,12 +406,20 @@ function App() {
 
 
       </div>
-      <AdditionSettings radio = {stationName}/>
+      <AdditionSettings radio={stationName} />
       <video id="vid" autoPlay loop muted>
         <source id="mp4" src={video} type="video/mp4" />
       </video>
 
-
+      <div className='loading'>
+      <div class="container">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <p>Loading...</p>
+        </div>
+      </div>
+        
 
     </div>
 

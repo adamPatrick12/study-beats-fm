@@ -16,9 +16,11 @@ import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import AnimeVibeStation from './RadioStation/AnimeVibe'
+import ChilledCowRadio from './RadioStation/ChilledCow'
 import AstralThrobRadio from './RadioStation/AstralThrob'
 import LofiGirlRadio from './RadioStation/LofiGirl'
 import H5G1Radio from './RadioStation/H5G1'
+import ChillHopRadio from './RadioStation/ChillHop'
 import play from './images/playBtn.png'
 import pauseImg from './images/pause.png'
 import skipBack from './images/skipBack.png'
@@ -184,6 +186,7 @@ function App() {
   const ChillHiphop = () => {
     setVideo(ChillHipHop)
     handleRadioChange()
+    setStation(ChillHopRadio)
     setStationName("ChillHop Music")
   }
 
@@ -210,6 +213,7 @@ function App() {
     setVideo(ChilledCow)
     handleRadioChange()
     setStationName("Chilled Cow")
+    setStation(ChilledCowRadio)
   }
 
   const theJazzHopCafe = () => {

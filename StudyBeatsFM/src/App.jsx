@@ -19,6 +19,7 @@ import AnimeVibeStation from './RadioStation/AnimeVibe'
 import ChilledCowRadio from './RadioStation/ChilledCow'
 import AstralThrobRadio from './RadioStation/AstralThrob'
 import LofiGirlRadio from './RadioStation/LofiGirl'
+import CloudHopRadio from './RadioStation/CloudHop'
 import H5G1Radio from './RadioStation/H5G1'
 import ChillHopRadio from './RadioStation/ChillHop'
 import play from './images/playBtn.png'
@@ -226,6 +227,7 @@ function App() {
     setVideo(cloudHop)
     handleRadioChange()
     setStationName("CloudHop")
+    setStation(CloudHopRadio)
   }
 
   const animeVibe = () => {

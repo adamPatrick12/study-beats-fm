@@ -17,6 +17,7 @@ import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import AnimeVibeStation from './RadioStation/AnimeVibe'
 import ChilledCowRadio from './RadioStation/ChilledCow'
+import DreamScapeRadio from './RadioStation/DreamScape'
 import AstralThrobRadio from './RadioStation/AstralThrob'
 import LofiGirlRadio from './RadioStation/LofiGirl'
 import CloudHopRadio from './RadioStation/CloudHop'
@@ -182,6 +183,7 @@ function App() {
     setVideo(DreamsScape)
     handleRadioChange()
     setStationName("DreamScape")
+    setStation(DreamScapeRadio)
   }
 
   const ChillHiphop = () => {
@@ -318,14 +320,6 @@ function App() {
               Electronic Gems
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              className="station"
-              onClick={Fantastic}>
-              <img className="triangle" src={triangle} alt="" />
-              Fantastic
-            </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.09 }}
@@ -353,13 +347,6 @@ function App() {
               STEEZYASFUCK
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              The Bootleg Boy
-            </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.09 }}

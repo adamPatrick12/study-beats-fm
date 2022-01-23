@@ -50,9 +50,12 @@ function App() {
   const [stationName, setStationName] = useState("")
 
   const [songIndex, setSongIndex] = useState(0)
-  const [song, setStation] = useState(ElectronicGemsRadio)     //station 
+  const [song, setStation] = useState(CloudHopRadio)     //station 
   const [songChangeCheck, setSongChange] = useState(false)
   const [volume, setVolume] = useState(1)
+
+
+  const [youtubeChannal, setYoutubeChannal ] = useState('')
 
   song[songIndex].volume = volume   // Volume checker
 
@@ -171,6 +174,7 @@ function App() {
     handleRadioChange()
     setStation(LofiGirlRadio)
     setStationName("LofiGirl")
+    setYoutubeChannal('https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow')
   }
 
   const ElectronicGemsVideo = () => {
@@ -178,6 +182,7 @@ function App() {
     handleRadioChange()
     setStation(ElectronicGemsRadio)
     setStationName("Electronic Gems")
+    setYoutubeChannal('https://www.youtube.com/c/ElectronicGems')
   }
 
   const DreamscapeVideo = () => {
@@ -185,6 +190,7 @@ function App() {
     handleRadioChange()
     setStationName("DreamScape")
     setStation(DreamScapeRadio)
+    setYoutubeChannal('https://www.youtube.com/c/dreamscapeyt')
   }
 
   const ChillHiphop = () => {
@@ -192,6 +198,7 @@ function App() {
     handleRadioChange()
     setStation(ChillHopRadio)
     setStationName("ChillHop Music")
+    setYoutubeChannal('https://www.youtube.com/c/Chillhopdotcom/videos')
   }
 
   const HFiveGOneFunc = () => {
@@ -199,6 +206,7 @@ function App() {
     handleRadioChange()
     setStation(H5G1Radio)
     setStationName("H5G1 Music")
+    setYoutubeChannal('https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g')
   }
 
   const SlowReverb = () => {
@@ -206,6 +214,7 @@ function App() {
     setStationName("Slowed+Reverb")
     handleRadioChange()
     setStation(SlowReverbRadio)
+    setYoutubeChannal('https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g')
   }
 
   const astralThrob = () => {
@@ -213,6 +222,7 @@ function App() {
     handleRadioChange()
     setStationName("Astral Throb")
     setStation(AstralThrobRadio)
+    setYoutubeChannal('https://www.youtube.com/channel/UCOikxWuG4kluDgWfpHpqsGg')
   }
 
   const chilledCow = () => {
@@ -220,12 +230,14 @@ function App() {
     handleRadioChange()
     setStationName("Chilled Cow")
     setStation(ChilledCowRadio)
+    setYoutubeChannal('https://www.youtube.com/c/LofiGirl')
   }
 
   const theJazzHopCafe = () => {
     setVideo(TheJazzHopCafe)
     handleRadioChange()
     setStationName("theJazz Cafe")
+    setYoutubeChannal('https://www.youtube.com/c/TheJazzHopCaf%C3%A9')
   }
 
   const CloudHop = () => {
@@ -233,6 +245,7 @@ function App() {
     handleRadioChange()
     setStationName("CloudHop")
     setStation(CloudHopRadio)
+    setYoutubeChannal('https://www.youtube.com/channel/UCWRqPtvnyVUS9zpADA-9oaw')
   }
 
   const animeVibe = () => {
@@ -240,6 +253,7 @@ function App() {
     handleRadioChange()
     setStation(AnimeVibeStation)
     setStationName("AnimeVibe")
+    setYoutubeChannal('https://www.youtube.com/c/AnimeVibe')
   }
 
 
@@ -407,7 +421,7 @@ function App() {
 
 
       </div>
-      <AdditionSettings radio={stationName} />
+      <AdditionSettings youtube = {youtubeChannal} radio={stationName} />
       <video id="vid" autoPlay loop muted>
         <source id="mp4" src={video} type="video/mp4" />
       </video>

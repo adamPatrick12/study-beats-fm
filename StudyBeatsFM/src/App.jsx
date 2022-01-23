@@ -10,6 +10,7 @@ import ChilledCow from './Videos/ChilledCow.mp4'
 import AstralThrob from './Videos/AstralThrob.mp4'
 import AnimeVibe from './Videos/AnimeVibe.mp4'
 import HFiveGOne from './Videos/H5G1Music.mp4'
+import Intro from './Videos/intro.mp4'
 import cloudHop from './Videos/cloudHop.mp4'
 import slowReverb from './Videos/slowReverb.mp4'
 import ChillHipHop from './Videos/ChillHipHop.mp4'
@@ -46,7 +47,7 @@ function App() {
   const [volumeImg, setVolumeImg] = useState(volumeOn)
 
 
-  const [stationName, setStationName] = useState("Electronic Gems")
+  const [stationName, setStationName] = useState("")
 
   const [songIndex, setSongIndex] = useState(0)
   const [song, setStation] = useState(ElectronicGemsRadio)     //station 
@@ -64,7 +65,6 @@ function App() {
 
   const handlePausePlaySwitch = (e) => {
     let className = e.target.className
-    console.log(className)
 
 
     if (className === "PlayPause" || className === "playBtn") {
@@ -153,7 +153,7 @@ function App() {
 
 
   const [radio, radioChange] = useState('retro')
-  const [video, setVideo] = useState(sythnWave)
+  const [video, setVideo] = useState(Intro)
 
 
   const reloadVideo = () => {

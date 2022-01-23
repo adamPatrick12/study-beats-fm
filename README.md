@@ -1,4 +1,4 @@
-# Study Beats FM - A all in one music player for your studying needs
+# Study Beats FM - An all in one music player for your studying needs
 
 An app that allows you to browse different music channals all in one convient place. Wheather you're studying, coding or streaming all of your music needs are at your finger tips.   
 

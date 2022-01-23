@@ -57,7 +57,7 @@ html, body {
   min-width: 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   margin-right: 3px;
 }
 

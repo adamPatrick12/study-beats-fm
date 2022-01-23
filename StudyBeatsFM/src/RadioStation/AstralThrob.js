@@ -15,6 +15,7 @@ import voyager from '../Music/AstralThrob/VOYAGER - Horizon.mp3'
 import zane from '../Music/AstralThrob/Zane Alexander - D a y (Dreamwave_Ambient).mp3'
 
 export const AstralThrobRadio = [
+    new Audio(spring),
     new Audio(forhill),
     new Audio(dawn),    
     new Audio(home),
@@ -26,7 +27,6 @@ export const AstralThrobRadio = [
         new Audio(saint),
         new Audio(ghost),
         new Audio(soleil),
-        new Audio(spring),
         new Audio(voyager),
         new Audio(zane),
         new Audio(Color),

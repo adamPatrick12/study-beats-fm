@@ -11,12 +11,13 @@ import AstralThrob from './Videos/AstralThrob.mp4'
 import AnimeVibe from './Videos/AnimeVibe.mp4'
 import HFiveGOne from './Videos/H5G1Music.mp4'
 import cloudHop from './Videos/cloudHop.mp4'
-import fantastic from './Videos/fantastic.mp4'
+import slowReverb from './Videos/slowReverb.mp4'
 import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import AnimeVibeStation from './RadioStation/AnimeVibe'
 import ChilledCowRadio from './RadioStation/ChilledCow'
+import SlowReverbRadio from './RadioStation/SlowReverb'
 import DreamScapeRadio from './RadioStation/DreamScape'
 import AstralThrobRadio from './RadioStation/AstralThrob'
 import LofiGirlRadio from './RadioStation/LofiGirl'
@@ -200,9 +201,11 @@ function App() {
     setStationName("H5G1 Music")
   }
 
-  const Fantastic = () => {
-    setVideo(fantastic)
+  const SlowReverb = () => {
+    setVideo(slowReverb)
+    setStationName("Slowed+Reverb")
     handleRadioChange()
+    setStation(SlowReverbRadio)
   }
 
   const astralThrob = () => {
@@ -342,9 +345,10 @@ function App() {
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
+              onClick={SlowReverb}
               className="station">
               <img className="triangle" src={triangle} alt="" />
-              STEEZYASFUCK
+              Slow + Reverb
             </motion.div>
 
 

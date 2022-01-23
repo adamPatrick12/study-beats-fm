@@ -1,6 +1,6 @@
 # Study Beats FM - A all in one music player for your studying needs
 
-An app that allows you to browse different music channals all in one convient place. Wheather you're studying, coding or streaming all of your music needs.   
+An app that allows you to browse different music channals all in one convient place. Wheather you're studying, coding or streaming all of your music needs are at your finger tips.   
 
 ## Preview
 
@@ -21,5 +21,5 @@ An app that allows you to browse different music channals all in one convient pl
 
 #
 
-Live: https://gallant-shockley-4b8705.netlify.app
+Live: https://gallant-shockley-4b8705.netlify.app - It takes some time to load the assets 
 

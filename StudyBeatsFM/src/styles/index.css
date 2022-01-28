@@ -74,8 +74,8 @@ html, body {
 }
 
 .githubLogo{
-    min-width: 15px;
-    height: 15px;
+    min-width: 17px;
+    height: 17px;
     filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
     margin-right: 7px;
 }

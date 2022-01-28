@@ -384,7 +384,7 @@ function App() {
           </div>
         </div>
         <div className='github'> 
-        <img  className = "githubLogo" src={github} alt="" />
+         <a  href="https://github.com/adamPatrick12">  <img  className = "githubLogo" src={github} alt="" />  </a> 
         <a className='link' href="https://github.com/adamPatrick12" >Github</a> 
          </div>
       </div>

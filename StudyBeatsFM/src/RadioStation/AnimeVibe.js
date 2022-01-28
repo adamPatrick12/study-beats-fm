@@ -12,10 +12,10 @@ import titan from '../Music/AnimeVibe/Sasageyo - Attack on Titan (Lofi Remix).mp
 import spirit from '../Music/AnimeVibe/Spirited Away 2001 - The Name of Life Instrumental Piano Inochi No Namae.mp3'
 
 export const AnimeVibeStation = [
-    new Audio(nkoha),
-    new Audio(naruto),    
     new Audio(jojo),
     new Audio(juju),
+    new Audio(nkoha),
+    new Audio(naruto),        
     new Audio(youth),
     new Audio(demon),
     new Audio(drunk),

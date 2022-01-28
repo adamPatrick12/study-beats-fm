@@ -15,6 +15,7 @@ import cloudHop from './Videos/cloudHop.mp4'
 import slowReverb from './Videos/slowreverb.mp4'
 import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
+import github from './images/github.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
 import AnimeVibeStation from './RadioStation/AnimeVibe'
 import ChilledCowRadio from './RadioStation/ChilledCow'
@@ -150,12 +151,11 @@ function App() {
   }, [songIndex])
 
 
-  useEffect(() => {       //handle song change 
+  useEffect(() => {       //handle song pause 
     start()
   }, [song])
 
 
-  const [radio, radioChange] = useState('retro')
   const [video, setVideo] = useState(Intro)
 
 
@@ -376,8 +376,16 @@ function App() {
             </motion.div>
 
 
+
+          </div>
+          <div>
+
           </div>
         </div>
+        <div className='github'> 
+        <img  className = "githubLogo" src={github} alt="" />
+        <a className='link' href="https://github.com/adamPatrick12" >Github</a> 
+         </div>
       </div>
       <div className="audioControlContainer">
         <div className="audioControl">

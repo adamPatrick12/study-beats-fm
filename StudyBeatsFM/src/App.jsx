@@ -157,6 +157,7 @@ function App() {
 
 
   const [video, setVideo] = useState(Intro)
+  const [radio, radioChange] = useState('retro')
 
 
   const reloadVideo = () => {

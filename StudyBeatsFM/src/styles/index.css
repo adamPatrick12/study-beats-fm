@@ -33,7 +33,6 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 15vw;
-  border: red solid 1px;
 }
 
 .radioStationsContainer{
@@ -43,7 +42,6 @@ html, body {
   text-align: center;
   display: flex;
   justify-content: end;
-  border: red solid 1px;
 }
 
 .radioControl{
@@ -65,7 +63,6 @@ html, body {
 }
 
 .github{
-  border: 1px solid red;;
   color: white;
   text-align: center;
   width: 100%;

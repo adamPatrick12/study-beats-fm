@@ -178,7 +178,7 @@ function App() {
   }
 
   const ElectronicGemsVideo = () => {
-    setVideo("//www.youtube.com/embed/dIf_ZQZCSoM?autoplay=1&mute=1&start=1")
+    setVideo("//www.youtube.com/embed/6GUjhzGDlKk?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStation(ElectronicGemsRadio)
     setStationName("Electronic Gems")

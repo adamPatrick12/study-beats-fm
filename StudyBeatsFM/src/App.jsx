@@ -51,7 +51,7 @@ function App() {
   const [stationName, setStationName] = useState("")
 
   const [songIndex, setSongIndex] = useState(0)
-  const [song, setStation] = useState(CloudHopRadio)     //station 
+  const [song, setStation] = useState(LofiGirlRadio)     //station 
   const [songChangeCheck, setSongChange] = useState(false)
   const [volume, setVolume] = useState(1)
 
@@ -105,7 +105,6 @@ function App() {
 
 
   const handleRadioChange = () => {
-    reloadVideo()
     pause()
     setSongIndex(0)
     setPlayPause(pauseImg)
@@ -156,8 +155,8 @@ function App() {
   }, [song])
 
 
-  const [video, setVideo] = useState(Intro)
-  const [radio, radioChange] = useState('retro')
+  const [video, setVideo] = useState('//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1')
+  const [radio, radioChange] = useState('')
 
 
   const reloadVideo = () => {
@@ -167,11 +166,11 @@ function App() {
     radioChange('Lofi')
   }
 
-
+  
   // <------------- Radio Change section -------------->
 
   const LofiGirlVideo = () => {
-    setVideo(LofiGirl)
+    setVideo("//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStation(LofiGirlRadio)
     setStationName("LofiGirl")
@@ -179,31 +178,32 @@ function App() {
   }
 
   const ElectronicGemsVideo = () => {
-    setVideo(sythnWave)
+    setVideo("//www.youtube.com/embed/dIf_ZQZCSoM?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStation(ElectronicGemsRadio)
     setStationName("Electronic Gems")
     setYoutubeChannal('https://www.youtube.com/c/ElectronicGems')
   }
-
+  
   const DreamscapeVideo = () => {
-    setVideo(DreamsScape)
+    setVideo("//www.youtube.com/embed/esNMS4rpsqY?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStationName("DreamScape")
     setStation(DreamScapeRadio)
     setYoutubeChannal('https://www.youtube.com/c/dreamscapeyt')
   }
-
+  
   const ChillHiphop = () => {
-    setVideo(ChillHipHop)
+    setVideo("//www.youtube.com/embed/iEGFFyv0MH4?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStation(ChillHopRadio)
     setStationName("ChillHop Music")
     setYoutubeChannal('https://www.youtube.com/c/Chillhopdotcom/videos')
   }
+  
 
   const HFiveGOneFunc = () => {
-    setVideo(HFiveGOne)
+    setVideo("//www.youtube.com/embed/lniKA4QHuxg?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStation(H5G1Radio)
     setStationName("H5G1 Music")
@@ -211,15 +211,15 @@ function App() {
   }
 
   const SlowReverb = () => {
-    setVideo(slowReverb)
+    setVideo("//www.youtube.com/embed/X9fH2VEFgwk?autoplay=1&mute=1&start=1")
     setStationName("Slowed+Reverb")
     handleRadioChange()
     setStation(SlowReverbRadio)
     setYoutubeChannal('https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g')
   }
-
+  
   const astralThrob = () => {
-    setVideo(AstralThrob)
+    setVideo("//www.youtube.com/embed/dIf_ZQZCSoM?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStationName("Astral Throb")
     setStation(AstralThrobRadio)
@@ -227,36 +227,36 @@ function App() {
   }
 
   const chilledCow = () => {
-    setVideo(ChilledCow)
+    setVideo("//www.youtube.com/embed/lTRiuFIWV54?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStationName("Chilled Cow")
     setStation(ChilledCowRadio)
     setYoutubeChannal('https://www.youtube.com/c/LofiGirl')
   }
-
+  
   const theJazzHopCafe = () => {
-    setVideo(TheJazzHopCafe)
+    setVideo("//www.youtube.com/embed/U8HBZOTZrf0?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStationName("theJazz Cafe")
     setYoutubeChannal('https://www.youtube.com/c/TheJazzHopCaf%C3%A9')
   }
-
+  
   const CloudHop = () => {
-    setVideo(cloudHop)
+    setVideo("//www.youtube.com/embed/70NcGd759Bc?autoplay=1&mute=1&start=1")
     handleRadioChange()
     setStationName("CloudHop")
     setStation(CloudHopRadio)
     setYoutubeChannal('https://www.youtube.com/channel/UCWRqPtvnyVUS9zpADA-9oaw')
   }
-
+  
   const animeVibe = () => {
-    setVideo(AnimeVibe)
+    setVideo('//www.youtube.com/embed/6Y2aEZ-BBGQ?autoplay=1&mute=1&start=1')
     handleRadioChange()
     setStation(AnimeVibeStation)
     setStationName("AnimeVibe")
     setYoutubeChannal('https://www.youtube.com/c/AnimeVibe')
   }
-
+ 
 
   return (
 
@@ -431,9 +431,13 @@ function App() {
 
       </div>
       <AdditionSettings youtube = {youtubeChannal} radio={stationName} />
-      <video id="vid" autoPlay loop muted>
-        <source id="mp4" src={video} type="video/mp4" />
-      </video>
+      <div class="videoContainer">
+        <iframe className='vid' src= {video}
+        scrolling="no" autoplay='1' mute='1' width="140%" height="140%" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+      
 
       <div className='loading'>
       <div class="container">

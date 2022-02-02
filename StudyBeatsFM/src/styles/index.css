@@ -6,14 +6,10 @@ html, body {
   box-sizing: border-box;
 }
 
-#vid{
-  position: absolute;
-  top: 0%; 
-  left: 0%;
-  width: 105%; 
-  height: 104%; 
+.vid{
+  position: relative;
+  overflow:hidden;
   z-index: -1; 
-  object-fit: cover;
 }
 
 .play{
@@ -301,6 +297,17 @@ input[type=range][orient=vertical]
   height: 100vh;
   width: 100vw;
 }
+
+.videoContainer {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: -220px;
+  left: -230px;
+}
+
+
 
 .container {
   position: absolute;

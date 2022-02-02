@@ -14,8 +14,9 @@ An app that allows you to browse different music channals all in one convient pl
 
 Using [Figma](https://www.figma.com/) I created a wireframe and a flex box layout to help me design the UI/layout of the application. 
 
-<img   width="500" legnth = "500" alt="Screen Shot 2022-01-17 at 9 18 38 PM" src="https://user-images.githubusercontent.com/56659226/152226188-aa7d8648-f20a-4831-a800-4829ea58e8e9.png"> <img  width="500" legnth = "600" alt="Screen Shot 2022-01-17 at 10 25 44 PM" src="https://user-images.githubusercontent.com/56659226/152226381-6531de2e-72c0-491d-9f4e-dc3659f84396.png">
-
+<div align="center">
+<img   width="500" align="center" legnth = "500" alt="Screen Shot 2022-01-17 at 9 18 38 PM" src="https://user-images.githubusercontent.com/56659226/152226188-aa7d8648-f20a-4831-a800-4829ea58e8e9.png"> <img  align="center" width="500" legnth = "600" alt="Screen Shot 2022-01-17 at 10 25 44 PM" src="https://user-images.githubusercontent.com/56659226/152226381-6531de2e-72c0-491d-9f4e-dc3659f84396.png">
+</div>
 
 ## Features 
 

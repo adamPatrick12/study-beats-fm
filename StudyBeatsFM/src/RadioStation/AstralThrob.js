@@ -15,10 +15,10 @@ import voyager from '../Music/AstralThrob/VOYAGER - Horizon.mp3'
 import zane from '../Music/AstralThrob/Zane Alexander - D a y (Dreamwave_Ambient).mp3'
 
 export const AstralThrobRadio = [
-    new Audio(spring),
-    new Audio(forhill),
-    new Audio(dawn),    
-    new Audio(home),
+    new Audio("https://www.mboxdrive.com/Zane%20Alexander%20-%20D%20a%20y%20(Dreamwave_Ambient).mp3"),
+    new Audio("https://www.mboxdrive.com/VOYAGER%20-%20Horizon.mp3"),
+    new Audio("https://www.mboxdrive.com/Soleil Bleu.mp3"),    
+    new Audio("https://www.mboxdrive.com/Dawn.mp3"),
         new Audio(golden),
         new Audio(nightRide),      
         new Audio(fractal),

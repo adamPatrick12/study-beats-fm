@@ -16,7 +16,7 @@ import take from '../Music/LofiGirl/Take Care.mp3'
 
 
 export const LofiGirlRadio = 
-[   new Audio (SweetLook),
+[   new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"),
     new Audio (Sixam),
     new Audio (blackout),
     new Audio (night),

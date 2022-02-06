@@ -12,18 +12,18 @@ import titan from '../Music/AnimeVibe/Sasageyo - Attack on Titan (Lofi Remix).mp
 import spirit from '../Music/AnimeVibe/Spirited Away 2001 - The Name of Life Instrumental Piano Inochi No Namae.mp3'
 
 export const AnimeVibeStation = [
-    new Audio(jojo),
-    new Audio(juju),
-    new Audio(nkoha),
-    new Audio(naruto),        
-    new Audio(youth),
-    new Audio(demon),
-    new Audio(drunk),
-    new Audio(flash),  
-    new Audio(Nomedbeats),
-    new Audio(saib),
-    new Audio(titan),
-    new Audio(spirit)
+    new Audio("https://www.mboxdrive.com/RUDE%20-%20Eternal%20Youth.mp3"),
+    new Audio("https://www.mboxdrive.com/JUJUTSU KAISEN - Ending _ Lost in Paradise feat. AKLO.mp3"),
+    new Audio("https://www.mboxdrive.com/liquor.mp3"),
+    new Audio("https://www.mboxdrive.com/NKOHA - Anguish of heartache.mp3"),        
+    new Audio("https://www.mboxdrive.com/Flashboy - Sharingan (Naruto remix).mp3"),
+    new Audio("https://www.mboxdrive.com/Naruto Shippuden - Obito's Theme (Kayou. Remix).mp3"),
+    new Audio("https://www.mboxdrive.com/demonSlayer.mp3"),
+    new Audio("https://www.mboxdrive.com/Giorno.mp3"),  
+    new Audio("https://www.mboxdrive.com/Sasageyo - Attack on Titan (Lofi Remix).mp3"),
+    new Audio("https://www.mboxdrive.com/Nomedbeats - Naruto Blue Bird Hip Hop remix.mp3"),
+    new Audio("https://www.mboxdrive.com/Saib - Shanghai Nights.mp3"),
+    new Audio("https://www.mboxdrive.com/Spirited Away 2001 - The Name of Life Instrumental Piano Inochi No Namae.mp3")
 ]
     
 

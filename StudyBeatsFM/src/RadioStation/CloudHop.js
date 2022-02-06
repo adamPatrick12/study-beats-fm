@@ -15,20 +15,20 @@ import memories from '../Music/CloudHop/Xander. - Memories.mp3'
 
 
 export const CloudHopRadio = [
-    new Audio(dontCry),    
-    new Audio(aimies),
-        new Audio(destination),
-        new Audio(levitate),
-        new Audio(Cxlt),    
-        new Audio(jhove),
-        new Audio(laffey),
-        new Audio(lesky),
-        new Audio(less),
-        new Audio(slow),
-        new Audio(peak),
-        new Audio(sleeperman),
-        new Audio(xander),
-        new Audio(memories),        
+    new Audio("https://www.mboxdrive.com/Dontcry x Nokiaa - Bliss.mp3"),    
+    new Audio("https://www.mboxdrive.com/Amies x Cxlt. - Nighttide.mp3"),
+        new Audio("https://www.mboxdrive.com/Amies - Destination Unknown.mp3"),
+        new Audio("https://www.mboxdrive.com/Amies - Levitate (ft. Cxlt.).mp3"),
+        new Audio("https://www.mboxdrive.com/Cxlt. - Above The Quiet City.mp3"),    
+        new Audio("https://www.mboxdrive.com/Jhove - Counting Sheep.mp3"),
+        new Audio("https://www.mboxdrive.com/Laffey - Infinite.mp3"),
+        new Audio("https://www.mboxdrive.com/LESKY x Waywell - Midas.mp3"),
+        new Audio("https://www.mboxdrive.com/Less.People - You All Sound the Same.mp3"),
+        new Audio("https://www.mboxdrive.com/Living Room x Hoogway - Slow Your Mind.mp3"),
+        new Audio("https://www.mboxdrive.com/Peak Twilight - Departure ft. S N U G.mp3"),
+        new Audio("https://www.mboxdrive.com/Sleepermane x Casiio - Maya.mp3"),
+        new Audio("https://www.mboxdrive.com/Xander. x Philip Somber - Blue Skies.mp3"),
+        new Audio("https://www.mboxdrive.com/Xander. - Memories.mp3"),        
 ]
     
 

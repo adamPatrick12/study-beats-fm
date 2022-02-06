@@ -16,21 +16,21 @@ import snowman from '../Music/ChilledCow/WYS - Snowman.mp3'
 
 
 export const ChilledCowRadio = [
-    new Audio(snowman),
-        new Audio(alone),
-        new Audio(ambulo),
-        new Audio(carried),
-        new Audio(cotten),
-        new Audio(cuddlin),
-        new Audio(espresso),
-        new Audio(glimlip),
-        new Audio(sorry),
-        new Audio(mell),
-        new Audio(reflection),
-        new Audio(single),
-        new Audio(walk),
-        new Audio(mine),
-        new Audio(wool),
+    new Audio("https://www.mboxdrive.com/WYS - Snowman.mp3"),
+        new Audio("https://www.mboxdrive.com/Alone Time.mp3"),
+        new Audio("https://www.mboxdrive.com/Ambulo x mell-ø – Luminescence.mp3"),
+        new Audio("https://www.mboxdrive.com/Carried Away.mp3"),
+        new Audio("https://www.mboxdrive.com/Cotton Cloud.mp3"),
+        new Audio("https://www.mboxdrive.com/Cuddlin.mp3"),
+        new Audio("https://www.mboxdrive.com/Espresso.mp3"),
+        new Audio("https://www.mboxdrive.com/glimlip x cocabona - Drops.mp3"),
+        new Audio("https://www.mboxdrive.com/Sorry.mp3"),
+        new Audio("https://www.mboxdrive.com/mell-ø - nova.mp3"),
+        new Audio("https://www.mboxdrive.com/Reflections.mp3"),
+        new Audio("https://www.mboxdrive.com/Single Phial.mp3"),
+        new Audio("https://www.mboxdrive.com/The Places We Used to Walk.mp3"),
+        new Audio("https://www.mboxdrive.com/Wish You Were Mine.mp3"),
+        new Audio("https://www.mboxdrive.com/Wool Gloves.mp3"),
        
 ]
     

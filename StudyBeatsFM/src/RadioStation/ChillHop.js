@@ -16,21 +16,21 @@ import Louk from '../Music/ChillHop/Yasper x Louk - Hummus and Bread.mp3'
 
 
 export const ChillHopRadio = [
-        new Audio(drwn),
-        new Audio(falcxne),
-        new Audio(fuj),
-        new Audio(keem),
-        new Audio(jsan),
-        new Audio(kupla),
-        new Audio(landing),
-        new Audio(leavy),
-        new Audio(Long),
-        new Audio(misery),
-        new Audio(pine),
-        new Audio(rain),
-        new Audio(deil),
-        new Audio(toast),
-        new Audio(Louk),
+        new Audio("https://www.mboxdrive.com/DRWN.%20-%20Estate.mp3"),
+        new Audio("https://www.mboxdrive.com/falcxne - reminisce.mp3"),
+        new Audio("https://www.mboxdrive.com/fujitsu - motions [Chillhop Release].mp3"),
+        new Audio("https://www.mboxdrive.com/KEEM.THE.CIPHER - [BLOSSOM.] w_ sugi.wa.mp3"),
+        new Audio("https://www.mboxdrive.com/jsan.mp3"),
+        new Audio("https://www.mboxdrive.com/Kupla - Evening Tide ft. Philanthrope.mp3"),
+        new Audio("https://www.mboxdrive.com/Landing.mp3"),
+        new Audio("https://www.mboxdrive.com/leavv - home [Vinyl available now].mp3"),
+        new Audio("https://www.mboxdrive.com/Longwayhome.mp3"),
+        new Audio("https://www.mboxdrive.com/Misery.mp3"),
+        new Audio("https://www.mboxdrive.com/Pine Trees.mp3"),
+        new Audio("https://www.mboxdrive.com/Rain.mp3"),
+        new Audio("https://www.mboxdrive.com/The Deli - Everyday.mp3"),
+        new Audio("https://www.mboxdrive.com/Tusken. X Philanthrope - Mr.Toast.mp3"),
+        new Audio("https://www.mboxdrive.com/Yasper x Louk - Hummus and Bread.mp3"),
 ]
     
 

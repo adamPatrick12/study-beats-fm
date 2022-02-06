@@ -39,16 +39,16 @@ let lastPlayedVolume = 0;
 function App() {
 
 
-  const [BtnClass, setBtnClass] = useState("PlayPause")           //pause play change
-  const [BtnClass2, setBtnClass2] = useState("playBtn")
-  const [playPauseImg, setPlayPause] = useState(play)
+  const [BtnClass, setBtnClass] = useState("PlayPause2")           //pause play change
+  const [BtnClass2, setBtnClass2] = useState("playBtn2")
+  const [playPauseImg, setPlayPause] = useState(pauseImg)
 
   const [muteCheck, setUnmute] = useState("volumeOn")             //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg")
   const [volumeImg, setVolumeImg] = useState(volumeOn)
 
 
-  const [stationName, setStationName] = useState("")
+  const [stationName, setStationName] = useState("LofiGirl")
 
   const [songIndex, setSongIndex] = useState(0)
   const [song, setStation] = useState(LofiGirlRadio)     //station 

@@ -16,20 +16,20 @@ import take from '../Music/LofiGirl/Take Care.mp3'
 
 
 export const LofiGirlRadio = 
-[   new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"),
-    new Audio (Sixam),
-    new Audio (blackout),
-    new Audio (night),
-    new Audio (attached),
-    new Audio (dream),
-    new Audio (darling),
-    new Audio (sapphire),
-    new Audio (technicolor),
-    new Audio (girl),
-    new Audio (seeyou),
-    new Audio (earth),
-    new Audio (sky),
-    new Audio (take),
+[   new Audio("https://www.mboxdrive.com/SweetLook.mp3"),
+    new Audio ("https://www.mboxdrive.com/Take%20Care.mp3"),
+    new Audio ("https://www.mboxdrive.com/Missing%20Earth%20(Original%20Mix).mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai%20-%20technicolor.mp3"),
+    new Audio ("https://www.mboxdrive.com/Sky%20Cruiser.mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai%20-%20when%20i%20see%20you.mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai%20-%20sapphire.mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai%20-%20dream%20of%20her.mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai - a night together.mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai - oh darling.mp3"),
+    new Audio ("https://www.mboxdrive.com/kudasai - attached.mp3"),
+    new Audio ("https://www.mboxdrive.com/Blackout (Original Mix).mp3"),
+    new Audio ("https://www.mboxdrive.com/girl.mp3"),
+    new Audio ("https://www.mboxdrive.com/6am.mp3"),
 
 ]
 

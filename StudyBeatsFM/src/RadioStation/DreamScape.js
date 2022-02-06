@@ -15,21 +15,21 @@ import title from '../Music/DreamScape/tilekid - you not the same (slowed).mp3'
 import lonely from '../Music/DreamScape/you look lonely, i can fix that....mp3'
 
 export const DreamScapeRadio = [
-    new Audio(ok),
-    new Audio(error),
-    new Audio(bonjr),
-    new Audio(clams),
-    new Audio(dye),
-    new Audio(hnrk),
-    new Audio(six),
-    new Audio(kel),
-    new Audio(malo),
-    new Audio(closer),
-    new Audio(thelema),
-    new Audio(blade),
-    new Audio(light),
-    new Audio(title),
-    new Audio(lonely),
+    new Audio("https://www.mboxdrive.com/ok.mp3"),
+    new Audio("https://www.mboxdrive.com/「 error 」- do you love me.mp3"),
+    new Audio("https://www.mboxdrive.com/bonjr.mp3"),
+    new Audio("https://www.mboxdrive.com/clams.mp3"),
+    new Audio("https://www.mboxdrive.com/DyE - Fantasy - Official Video.mp3"),
+    new Audio("https://www.mboxdrive.com/hnrk - dimensionstor.mp3"),
+    new Audio("https://www.mboxdrive.com/instupendo - six forty seven (slowed down).mp3"),
+    new Audio("https://www.mboxdrive.com/karamel kel - aglow (intro) (slowed down & looped).mp3"),
+    new Audio("https://www.mboxdrive.com/malo.mp3"),
+    new Audio("https://www.mboxdrive.com/n u a g e s - closer.mp3"),
+    new Audio("https://www.mboxdrive.com/øfdream - thelema (slowed & bass boosted).mp3"),
+    new Audio("https://www.mboxdrive.com/synthwave goose - blade runner 2049.mp3"),
+    new Audio("https://www.mboxdrive.com/there is light in us (slowed down Version).mp3"),
+    new Audio("https://www.mboxdrive.com/tilekid - you not the same (slowed).mp3"),
+    new Audio("https://www.mboxdrive.com/you look lonely, i can fix that....mp3"),
 
 ]
 

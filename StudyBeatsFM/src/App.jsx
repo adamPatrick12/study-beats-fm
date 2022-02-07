@@ -2,18 +2,6 @@ import './styles/index.css'
 import './styles/audioControl.css'
 import { useEffect, useState } from 'react'
 import AdditionSettings from './components/additionalInfo'
-import sythnWave from './Videos/Electronic-Gems.mp4'
-import DreamsScape from './Videos/DreamsScape.mp4'
-import LofiGirl from './Videos/LofiGirl.mp4'
-import TheJazzHopCafe from './Videos/TheJazzHopCafe.mp4'
-import ChilledCow from './Videos/ChilledCow.mp4'
-import AstralThrob from './Videos/AstralThrob.mp4'
-import AnimeVibe from './Videos/AnimeVibe.mp4'
-import HFiveGOne from './Videos/H5G1Music.mp4'
-import Intro from './Videos/intro.mp4'
-import cloudHop from './Videos/cloudHop.mp4'
-import slowReverb from './Videos/slowreverb.mp4'
-import ChillHipHop from './Videos/ChillHipHop.mp4'
 import triangle from './images/playBtn.png'
 import github from './images/github.png'
 import ElectronicGemsRadio from './RadioStation/ElectronicGems'
@@ -33,6 +21,7 @@ import skipFoward from './images/skipForward.png'
 import volumeOn from './images/volumeOn.png'
 import mute from './images/mute.png'
 import { motion } from "framer-motion"
+import ReactPlayer from 'react-player'
 
 let lastPlayedVolume = 0;
 
@@ -46,8 +35,9 @@ function App() {
   const [muteCheck, setUnmute] = useState("volumeOn")             //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg")
   const [volumeImg, setVolumeImg] = useState(volumeOn)
-
-
+  
+  const [playSongTest, setSongTest] = useState(true)
+  
   const [stationName, setStationName] = useState("LofiGirl")
 
   const [songIndex, setSongIndex] = useState(0)
@@ -121,10 +111,12 @@ function App() {
       song[songIndex].volume = volume
     } else {
       song[songIndex].play()
+      setSongTest(true)
     }
   }
 
   const pause = () => {
+    setSongTest(false)
     song[songIndex].pause()
   }
 
@@ -152,10 +144,10 @@ function App() {
 
   useEffect(() => {       //handle song pause 
     start()
-  }, [song])
+  }, [song, playSongTest])
 
 
-  const [video, setVideo] = useState('//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1')
+  const [video, setVideo] = useState(`//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1`)
   const [radio, radioChange] = useState('')
 
 
@@ -256,7 +248,6 @@ function App() {
     setStationName("AnimeVibe")
     setYoutubeChannal('https://www.youtube.com/c/AnimeVibe')
   }
- 
 
   return (
 
@@ -320,6 +311,7 @@ function App() {
               CloudHop Music
             </motion.div>
 
+          
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
@@ -433,11 +425,11 @@ function App() {
       <AdditionSettings youtube = {youtubeChannal} radio={stationName} />
       <div class="videoContainer">
         <iframe className='vid' src= {video}
-        scrolling="no" autoplay='1' mute='1' width="140%" height="140%" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        scrolling="no"  mute='1' width="140%" height="140%" frameborder="0" 
+        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
-      
+      <ReactPlayer className="liveStreamPlayer" playing={playSongTest} url='https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl' />
 
       <div className='loading'>
       <div class="container">

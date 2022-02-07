@@ -307,7 +307,11 @@ input[type=range][orient=vertical]
   left: -230px;
 }
 
-
+.liveStreamPlayer{
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
 
 .container {
   position: absolute;

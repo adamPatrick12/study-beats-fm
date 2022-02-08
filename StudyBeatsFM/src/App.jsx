@@ -4,20 +4,8 @@ import { useEffect, useState } from 'react'
 import AdditionSettings from './components/additionalInfo'
 import triangle from './images/playBtn.png'
 import github from './images/github.png'
-import ElectronicGemsRadio from './RadioStation/ElectronicGems'
-import AnimeVibeStation from './RadioStation/AnimeVibe'
-import ChilledCowRadio from './RadioStation/ChilledCow'
-import SlowReverbRadio from './RadioStation/SlowReverb'
-import DreamScapeRadio from './RadioStation/DreamScape'
-import AstralThrobRadio from './RadioStation/AstralThrob'
-import LofiGirlRadio from './RadioStation/LofiGirl'
-import CloudHopRadio from './RadioStation/CloudHop'
-import H5G1Radio from './RadioStation/H5G1'
-import ChillHopRadio from './RadioStation/ChillHop'
 import play from './images/playBtn.png'
 import pauseImg from './images/pause.png'
-import skipBack from './images/skipBack.png'
-import skipFoward from './images/skipForward.png'
 import volumeOn from './images/volumeOn.png'
 import mute from './images/mute.png'
 import { motion } from "framer-motion"
@@ -28,33 +16,29 @@ let lastPlayedVolume = 0;
 function App() {
 
 
-  const [BtnClass, setBtnClass] = useState("PlayPause2")           //pause play change
-  const [BtnClass2, setBtnClass2] = useState("playBtn2")
-  const [playPauseImg, setPlayPause] = useState(pauseImg)
+  const [BtnClass, setBtnClass] = useState("PlayPause")           //pause play change
+  const [BtnClass2, setBtnClass2] = useState("playBtn")
+  const [playPauseImg, setPlayPause] = useState(play)
 
   const [muteCheck, setUnmute] = useState("volumeOn")             //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg")
   const [volumeImg, setVolumeImg] = useState(volumeOn)
   
-  const [playSongTest, setSongTest] = useState(true)
+  const [livestream, playLiveStream] = useState(false)
+  const [pauseScreen, setPauseScreen] = useState("pauseScreen")
+  const [currentLivestream, setLivestream ] = useState('https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl')
   
   const [stationName, setStationName] = useState("LofiGirl")
 
   const [songIndex, setSongIndex] = useState(0)
-  const [song, setStation] = useState(LofiGirlRadio)     //station 
+  const [song, setStation] = useState("")     //station 
   const [songChangeCheck, setSongChange] = useState(false)
   const [volume, setVolume] = useState(1)
 
 
   const [youtubeChannal, setYoutubeChannal ] = useState('')
 
-  song[songIndex].volume = volume   // Volume checker
-
-  let handleSongChange = window.setInterval(function () {
-    if (song[songIndex].ended === true) {
-      nextSong()
-    }
-  }, 5000);
+   // Volume checker
 
 
   const handlePausePlaySwitch = (e) => {
@@ -95,29 +79,20 @@ function App() {
 
 
   const handleRadioChange = () => {
-    pause()
-    setSongIndex(0)
     setPlayPause(pauseImg)
     setBtnClass("PlayPause2")
     setBtnClass2("playBtn2")
   }
 
-  const start = () => {
-
-    if (songChangeCheck === true) {
-      song[songIndex].load()
-      song[songIndex].play()
-      setSongChange(false)
-      song[songIndex].volume = volume
-    } else {
-      song[songIndex].play()
-      setSongTest(true)
-    }
+  const start = () => {  
+      playLiveStream(false)  
+      playLiveStream(true)
+      setPauseScreen("unpauseScreen")
   }
 
   const pause = () => {
-    setSongTest(false)
-    song[songIndex].pause()
+    setPauseScreen("pauseScreen")
+    playLiveStream(false)
   }
 
   const stopPlayingLastSong = () => {
@@ -138,13 +113,13 @@ function App() {
   }
 
   useEffect(() => {       //handle song change 
-    start()
+    
   }, [songIndex])
 
 
   useEffect(() => {       //handle song pause 
-    start()
-  }, [song, playSongTest])
+    
+  }, [song])
 
 
   const [video, setVideo] = useState(`//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1`)
@@ -163,90 +138,135 @@ function App() {
 
   const LofiGirlVideo = () => {
     setVideo("//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1")
-    handleRadioChange()
-    setStation(LofiGirlRadio)
     setStationName("LofiGirl")
     setYoutubeChannal('https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow')
+    setLivestream('https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
 
-  const ElectronicGemsVideo = () => {
-    setVideo("//www.youtube.com/embed/6GUjhzGDlKk?autoplay=1&mute=1&start=1")
-    handleRadioChange()
-    setStation(ElectronicGemsRadio)
-    setStationName("Electronic Gems")
-    setYoutubeChannal('https://www.youtube.com/c/ElectronicGems')
+  const AmbientRenders = () => {
+    setVideo("//www.youtube.com/embed/hBGbt2CRDpA?autoplay=1&mute=1&start=1")
+    setStationName("Ambient Renders")
+    setYoutubeChannal('https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw')
+    setLivestream('https://www.youtube.com/watch?v=dIdb_BWkZq4&ab_channel=AmbientRenders')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
   
-  const DreamscapeVideo = () => {
-    setVideo("//www.youtube.com/embed/esNMS4rpsqY?autoplay=1&mute=1&start=1")
-    handleRadioChange()
-    setStationName("DreamScape")
-    setStation(DreamScapeRadio)
-    setYoutubeChannal('https://www.youtube.com/c/dreamscapeyt')
+  const IvyRecords = () => {
+    setVideo("//www.youtube.com/embed/sDXy4xqKmA0?autoplay=1&mute=1&start=1")
+    setStationName("Ivy Records")
+    setYoutubeChannal('https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg')
+    setLivestream('https://www.youtube.com/watch?v=j28Oyq6NnOs&ab_channel=IvyStationRecords')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
   
   const ChillHiphop = () => {
     setVideo("//www.youtube.com/embed/iEGFFyv0MH4?autoplay=1&mute=1&start=1")
-    handleRadioChange()
-    setStation(ChillHopRadio)
     setStationName("ChillHop Music")
     setYoutubeChannal('https://www.youtube.com/c/Chillhopdotcom/videos')
+    setLivestream('https://www.youtube.com/watch?v=7NOSDKb0HlU&ab_channel=ChillhopMusic')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
   
 
   const HFiveGOneFunc = () => {
     setVideo("//www.youtube.com/embed/lniKA4QHuxg?autoplay=1&mute=1&start=1")
-    handleRadioChange()
-    setStation(H5G1Radio)
     setStationName("H5G1 Music")
     setYoutubeChannal('https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g')
+    setLivestream('https://www.youtube.com/watch?v=-9gEgshJUuY&ab_channel=lofigeek')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
 
-  const SlowReverb = () => {
-    setVideo("//www.youtube.com/embed/X9fH2VEFgwk?autoplay=1&mute=1&start=1")
-    setStationName("Slowed+Reverb")
-    handleRadioChange()
-    setStation(SlowReverbRadio)
-    setYoutubeChannal('https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g')
+  const StudyMD = () => {
+    setVideo("//www.youtube.com/embed/PcxpLIv4CNU?autoplay=1&mute=1&start=1")
+    setStationName("StudyMD")
+    setYoutubeChannal('https://www.youtube.com/channel/UC5CRP-6oxYenIgBj17CkBZg')
+    setLivestream('https://www.youtube.com/watch?v=uxR_sTZnBtg&ab_channel=StudyMD')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
   
   const astralThrob = () => {
     setVideo("//www.youtube.com/embed/dIf_ZQZCSoM?autoplay=1&mute=1&start=1")
-    handleRadioChange()
     setStationName("Astral Throb")
-    setStation(AstralThrobRadio)
-    setYoutubeChannal('https://www.youtube.com/channel/UCOikxWuG4kluDgWfpHpqsGg')
+    setYoutubeChannal('https://www.youtube.com/c/AstralThrob')
+    setLivestream('https://www.youtube.com/watch?v=xxgxkjV70Vc&ab_channel=NightrideFM')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
 
   const chilledCow = () => {
     setVideo("//www.youtube.com/embed/lTRiuFIWV54?autoplay=1&mute=1&start=1")
-    handleRadioChange()
     setStationName("Chilled Cow")
-    setStation(ChilledCowRadio)
     setYoutubeChannal('https://www.youtube.com/c/LofiGirl')
+    setLivestream('https://www.youtube.com/watch?v=DWcJFNfaw9c&ab_channel=LofiGirl')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
   
   const theJazzHopCafe = () => {
     setVideo("//www.youtube.com/embed/U8HBZOTZrf0?autoplay=1&mute=1&start=1")
-    handleRadioChange()
     setStationName("theJazz Cafe")
     setYoutubeChannal('https://www.youtube.com/c/TheJazzHopCaf%C3%A9')
+    setLivestream('https://www.youtube.com/watch?v=-5KAN9_CzSA&ab_channel=STEEZYASFUCK')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
   
   const CloudHop = () => {
     setVideo("//www.youtube.com/embed/70NcGd759Bc?autoplay=1&mute=1&start=1")
-    handleRadioChange()
     setStationName("CloudHop")
-    setStation(CloudHopRadio)
     setYoutubeChannal('https://www.youtube.com/channel/UCWRqPtvnyVUS9zpADA-9oaw')
+    setLivestream('https://www.youtube.com/watch?v=kgx4WGK0oNU&ab_channel=%E9%98%BF%E9%B2%8DAbao')
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
-  
+ 
   const animeVibe = () => {
-    setVideo('//www.youtube.com/embed/6Y2aEZ-BBGQ?autoplay=1&mute=1&start=1')
-    handleRadioChange()
-    setStation(AnimeVibeStation)
+    setVideo('//www.youtube.com/embed/autZufInfMo?autoplay=1&mute=1&start=1')
     setStationName("AnimeVibe")
     setYoutubeChannal('https://www.youtube.com/c/AnimeVibe')
+    setLivestream("https://www.youtube.com/watch?v=w3LWHIz3bMc&ab_channel=nostalgic")
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
+    setPlayPause(pauseImg)
+      setBtnClass("PlayPause2")
+      setBtnClass2("playBtn2")
   }
 
   return (
@@ -266,6 +286,15 @@ function App() {
         <div className="radioStationsContainer">
           <div className='radioList'>
 
+          <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={AmbientRenders}
+              className="station">
+              <img className="triangle" src={triangle} alt="" />
+              Ambient Renders
+            </motion.div>
+            
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
@@ -315,22 +344,13 @@ function App() {
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
-              onClick={DreamscapeVideo}
+              onClick={IvyRecords}
               className="station">
               <img className="triangle" src={triangle} alt="" />
-              DreamScape
+              Ivy Records
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={ElectronicGemsVideo}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              Electronic Gems
-            </motion.div>
-
-
+          
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
@@ -352,10 +372,10 @@ function App() {
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
-              onClick={SlowReverb}
+              onClick={StudyMD}
               className="station">
               <img className="triangle" src={triangle} alt="" />
-              Slow + Reverb
+              StudyMD
             </motion.div>
 
 
@@ -382,18 +402,7 @@ function App() {
       </div>
       <div className="audioControlContainer">
         <div className="audioControl">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={previousSong} className="goBackBtn">
-            <img className="audioImgSize2" src={skipBack} alt="" />
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={nextSong} className="goFowardBtn">
-            <img src={skipFoward} className="audioImgSize" alt="" />
-          </motion.div>
+        
           <motion.div
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.9 }}
@@ -422,6 +431,9 @@ function App() {
 
 
       </div>
+      <div className={pauseScreen}>
+             <p style={{marginTop: "30rem"}}>Music Paused</p> 
+      </div>
       <AdditionSettings youtube = {youtubeChannal} radio={stationName} />
       <div class="videoContainer">
         <iframe className='vid' src= {video}
@@ -429,7 +441,13 @@ function App() {
         allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
-      <ReactPlayer className="liveStreamPlayer" playing={playSongTest} url='https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl' />
+           
+
+      <ReactPlayer 
+      className="liveStreamPlayer" 
+      playing={livestream} 
+      volume={volume}
+      url={currentLivestream} />
 
       <div className='loading'>
       <div class="container">

@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: end;
     margin-left: 11rem;
+    z-index: 1;
   }
   
   .audioControl{
@@ -19,21 +20,9 @@
     justify-content: center;
     box-sizing: border-box;
     margin-top: auto;
-    
+    z-index: 1;
   }
 
-.goBackBtn{
-    border: #c7c7c7 1px solid;
-    height: 40px;
-    min-width: 40px;
-    border-radius: 50%;
-    margin-top: 3.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 6px;
-    margin-right: 6px;
-  }
   
   .audioImgSize{
     min-width: 20px;
@@ -81,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 6px;
+    margin-left: 120px;
     margin-right: 6px;
   }
   

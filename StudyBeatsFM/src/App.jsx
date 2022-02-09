@@ -165,7 +165,7 @@ function App() {
     setVideo("//www.youtube.com/embed/sDXy4xqKmA0?autoplay=1&mute=1&start=65")
     setStationName("Ivy Records")
     setYoutubeChannal('https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg')
-    setLivestream('https://www.youtube.com/watch?v=j28Oyq6NnOs&ab_channel=IvyStationRecords')
+    setLivestream('https://www.youtube.com/watch?v=_L6Cky3dgjI&ab_channel=IvyStationRecords')
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
@@ -259,10 +259,10 @@ function App() {
   }
 
   const animeVibe = () => {
-    setVideo('//www.youtube.com/embed/autZufInfMo?autoplay=1&mute=1&start=1')
+    setVideo('//www.youtube.com/embed/zL1gMeoN8bI?autoplay=1&mute=1&start=42')
     setStationName("AnimeVibe")
     setYoutubeChannal('https://www.youtube.com/c/AnimeVibe')
-    setLivestream("https://www.youtube.com/watch?v=w3LWHIz3bMc&ab_channel=nostalgic")
+    setLivestream("https://www.youtube.com/watch?v=WDXPJWIgX-o&ab_channel=nostalgic")
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)

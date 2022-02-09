@@ -29,6 +29,7 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 15vw;
+  align-content: flex-end;
 }
 
 .radioStationsContainer{
@@ -59,15 +60,25 @@ html, body {
   margin-right: 3px;
 }
 
-.github{
+.socialsContainer2{
   color: white;
-  text-align: center;
-  width: 100%;
+  width: 99%;
+  height: 70%;
+  height: 5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   text-transform: uppercase;
+  justify-content: end;
   font-size: 15px;
   letter-spacing: 0px;
+  display: flex;
+}
+
+.socials{
+  min-width: 75%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 
 .githubLogo{
@@ -78,11 +89,22 @@ html, body {
 }
 
 .link{
-  display: inline;
-  margin-right: 6rem;
+  margin-right: 100px;
   color: #c7c7c7;
   text-decoration: none;
   cursor: pointer;
+}
+
+.link2{
+  color: #c7c7c7;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.link2:hover, .link:hover{
+  color: white;
+ 
 }
 
 .logo{
@@ -100,6 +122,7 @@ html, body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .subHeading{
@@ -145,25 +168,7 @@ html, body {
 }
 
 
-.pomodoroTimerContainer{
-  width: 15vw;
-  height: 99%;
-  text-align: center;
-  font-size: 3rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  
-}
 
-.timer{
-  width: 99%;
-  height: 10vh;
-  text-align: center;
-  font-size: 3rem;
-  color: white;
-}
 
 
 .songName{
@@ -203,6 +208,7 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  z-index: 1;
 }
 
 .otherSounds{
@@ -321,14 +327,16 @@ input[type=range][orient=vertical]
   position: absolute;
   top: 0px;
   left: 0px;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 0;
   text-align: center;
   justify-content: center;
-  font-size: 2rem;
+  align-content: center;
+  font-size: 1rem;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
+  letter-spacing: 7px;
 }
 
 .unpauseScreen{
@@ -416,4 +424,54 @@ input[type=range][orient=vertical]
   100%{
     transform: rotate(600deg);
   }
+}
+
+svg {
+  margin-top: 20rem;
+  width: 170px;
+  height: 170px;
+  opacity: 1;
+}
+
+/* SMOKE */
+#smoke-1 {
+  stroke-dasharray: 0, 10;
+  animation: smoke 6s ease infinite;
+}
+
+#smoke-2 {
+  stroke-dasharray: 0, 10;
+  animation: smoke 6s 0.5s ease infinite;
+}
+
+@keyframes smoke {
+  0% { stroke-dasharray: 0, 10; }
+  50% { stroke-dasharray: 10, 0; }
+  100% { stroke-dasharray: 10, 0; opacity: 0; }
+}
+
+/* WRITING */
+#line-1 {
+  opacity: 0;
+  animation: writing 0.5s linear forwards;
+}
+
+#line-2 {
+  opacity: 0;
+  animation: writing 0.5s 1s linear forwards;
+}
+
+#line-3 {
+  opacity: 0;
+  animation: writing 0.5s 1.5s linear forwards;
+}
+
+#line-4 {
+  opacity: 0;
+  animation: writing 0.5s 2s linear forwards;
+}
+
+@keyframes writing {
+  0% { width: 0px; opacity: 1;}
+  100% { width: 14px; opacity: 1;}
 }

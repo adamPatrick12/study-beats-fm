@@ -3,6 +3,7 @@ import rain from '../images/rain.png'
 import { useEffect, useState } from 'react'
 import RainASMR from '../Sounds/rain.mp3'
 import OceanASMR from '../Sounds/Ocean.mp3'
+import whiteNoiseASMR from '../Sounds/whiteNoise.mp3'
 import waves from '../images/waves.png'
 import youtube from '../images/youtube.png'
 import WhiteNoise from '../images/whiteNoise.png'
@@ -10,6 +11,7 @@ import { motion } from "framer-motion"
 
 const Rain = new Audio(RainASMR)
 const Ocean = new Audio(OceanASMR)
+const whiteNoise = new Audio(whiteNoiseASMR)
 
 const AdditionSettings = (props) => {
 
@@ -22,9 +24,11 @@ const AdditionSettings = (props) => {
 
     Ocean.volume = oceanVolume
     Rain.volume = rainVolume
+    whiteNoise.volume = whiteNoiseVolume
 
     Rain.play()
     Ocean.play()
+    whiteNoise.play()
 
  
     const setTransition = () => {
@@ -105,9 +109,9 @@ const AdditionSettings = (props) => {
                         orient="vertical"
                         min={0}
                         max={1}
-                        value={oceanVolume}
+                        value={whiteNoiseVolume}
                         onChange={event => {
-                            setOceanVolume(event.target.valueAsNumber)
+                            setWhiteNoiseVolume(event.target.valueAsNumber)
                         }}
                         step={0.2}
 

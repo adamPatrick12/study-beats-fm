@@ -2,6 +2,7 @@ import './styles/index.css'
 import './styles/audioControl.css'
 import { useEffect, useState } from 'react'
 import AdditionSettings from './components/additionalInfo'
+import PauseImage from './components/pauseImage'
 import triangle from './images/playBtn.png'
 import github from './images/github.png'
 import play from './images/playBtn.png'
@@ -23,11 +24,11 @@ function App() {
   const [muteCheck, setUnmute] = useState("volumeOn")             //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg")
   const [volumeImg, setVolumeImg] = useState(volumeOn)
-  
+
   const [livestream, playLiveStream] = useState(false)
   const [pauseScreen, setPauseScreen] = useState("pauseScreen")
-  const [currentLivestream, setLivestream ] = useState('https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl')
-  
+  const [currentLivestream, setLivestream] = useState('https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl')
+
   const [stationName, setStationName] = useState("LofiGirl")
 
   const [songIndex, setSongIndex] = useState(0)
@@ -36,9 +37,9 @@ function App() {
   const [volume, setVolume] = useState(1)
 
 
-  const [youtubeChannal, setYoutubeChannal ] = useState('')
+  const [youtubeChannal, setYoutubeChannal] = useState('')
 
-   // Volume checker
+  // Volume checker
 
 
   const handlePausePlaySwitch = (e) => {
@@ -84,10 +85,10 @@ function App() {
     setBtnClass2("playBtn2")
   }
 
-  const start = () => {  
-      playLiveStream(false)  
-      playLiveStream(true)
-      setPauseScreen("unpauseScreen")
+  const start = () => {
+    playLiveStream(false)
+    playLiveStream(true)
+    setPauseScreen("unpauseScreen")
   }
 
   const pause = () => {
@@ -113,12 +114,12 @@ function App() {
   }
 
   useEffect(() => {       //handle song change 
-    
+
   }, [songIndex])
 
 
   useEffect(() => {       //handle song pause 
-    
+
   }, [song])
 
 
@@ -133,7 +134,7 @@ function App() {
     radioChange('Lofi')
   }
 
-  
+
   // <------------- Radio Change section -------------->
 
   const LofiGirlVideo = () => {
@@ -144,8 +145,8 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
 
   const AmbientRenders = () => {
@@ -156,22 +157,22 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
-  
+
   const IvyRecords = () => {
-    setVideo("//www.youtube.com/embed/sDXy4xqKmA0?autoplay=1&mute=1&start=1")
+    setVideo("//www.youtube.com/embed/sDXy4xqKmA0?autoplay=1&mute=1&start=65")
     setStationName("Ivy Records")
     setYoutubeChannal('https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg')
     setLivestream('https://www.youtube.com/watch?v=j28Oyq6NnOs&ab_channel=IvyStationRecords')
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
-  
+
   const ChillHiphop = () => {
     setVideo("//www.youtube.com/embed/iEGFFyv0MH4?autoplay=1&mute=1&start=1")
     setStationName("ChillHop Music")
@@ -180,10 +181,10 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
-  
+
 
   const HFiveGOneFunc = () => {
     setVideo("//www.youtube.com/embed/lniKA4QHuxg?autoplay=1&mute=1&start=1")
@@ -193,8 +194,8 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
 
   const StudyMD = () => {
@@ -205,10 +206,10 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
-  
+
   const astralThrob = () => {
     setVideo("//www.youtube.com/embed/dIf_ZQZCSoM?autoplay=1&mute=1&start=1")
     setStationName("Astral Throb")
@@ -217,8 +218,8 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
 
   const chilledCow = () => {
@@ -229,10 +230,10 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
-  
+
   const theJazzHopCafe = () => {
     setVideo("//www.youtube.com/embed/U8HBZOTZrf0?autoplay=1&mute=1&start=1")
     setStationName("theJazz Cafe")
@@ -241,10 +242,10 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
-  
+
   const CloudHop = () => {
     setVideo("//www.youtube.com/embed/70NcGd759Bc?autoplay=1&mute=1&start=1")
     setStationName("CloudHop")
@@ -253,10 +254,10 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
- 
+
   const animeVibe = () => {
     setVideo('//www.youtube.com/embed/autZufInfMo?autoplay=1&mute=1&start=1')
     setStationName("AnimeVibe")
@@ -265,8 +266,8 @@ function App() {
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
-      setBtnClass("PlayPause2")
-      setBtnClass2("playBtn2")
+    setBtnClass("PlayPause2")
+    setBtnClass2("playBtn2")
   }
 
   return (
@@ -286,7 +287,7 @@ function App() {
         <div className="radioStationsContainer">
           <div className='radioList'>
 
-          <motion.div
+            <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
               onClick={AmbientRenders}
@@ -294,7 +295,7 @@ function App() {
               <img className="triangle" src={triangle} alt="" />
               Ambient Renders
             </motion.div>
-            
+
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
@@ -340,7 +341,7 @@ function App() {
               CloudHop Music
             </motion.div>
 
-          
+
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
@@ -350,7 +351,7 @@ function App() {
               Ivy Records
             </motion.div>
 
-          
+
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
@@ -391,18 +392,27 @@ function App() {
 
 
           </div>
-          <div>
+        </div>
+        <div className='socialsContainer2'>
+          <div className='socials'>
+            
+            <motion.div
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => { window.open("https://github.com/adamPatrick12") }}
+              className="link">
+              <img className="githubLogo" src={github} alt="" />
+              Github
+            </motion.div>
 
+           
+            
           </div>
         </div>
-        <div className='github'> 
-         <a  href="https://github.com/adamPatrick12">  <img  className = "githubLogo" src={github} alt="" />  </a> 
-        <a className='link' href="https://github.com/adamPatrick12" >Github</a> 
-         </div>
       </div>
       <div className="audioControlContainer">
         <div className="audioControl">
-        
+
           <motion.div
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.9 }}
@@ -432,32 +442,33 @@ function App() {
 
       </div>
       <div className={pauseScreen}>
-             <p style={{marginTop: "30rem"}}>Music Paused</p> 
+            <PauseImage/>
+        <p style={{ marginTop: "0rem" }}>Music Paused</p>
       </div>
-      <AdditionSettings youtube = {youtubeChannal} radio={stationName} />
+      <AdditionSettings youtube={youtubeChannal} radio={stationName} />
       <div class="videoContainer">
-        <iframe className='vid' src= {video}
-        scrolling="no"  mute='1' width="140%" height="140%" frameborder="0" 
-        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <iframe className='vid' src={video}
+          scrolling="no" mute='1' width="140%" height="140%" frameborder="0"
+          allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
-           
 
-      <ReactPlayer 
-      className="liveStreamPlayer" 
-      playing={livestream} 
-      volume={volume}
-      url={currentLivestream} />
+
+      <ReactPlayer
+        className="liveStreamPlayer"
+        playing={livestream}
+        volume={volume}
+        url={currentLivestream} />
 
       <div className='loading'>
-      <div class="container">
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <p>Loading...</p>
+        <div class="container">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <p>Loading...</p>
         </div>
       </div>
-        
+
 
     </div>
 

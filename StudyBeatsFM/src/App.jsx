@@ -31,15 +31,12 @@ function App() {
 
   const [stationName, setStationName] = useState("LofiGirl")
 
-  const [songIndex, setSongIndex] = useState(0)
-  const [song, setStation] = useState("")     //station 
-  const [songChangeCheck, setSongChange] = useState(false)
+ 
   const [volume, setVolume] = useState(1)
 
 
   const [youtubeChannal, setYoutubeChannal] = useState('')
 
-  // Volume checker
 
 
   const handlePausePlaySwitch = (e) => {
@@ -61,9 +58,7 @@ function App() {
 
   const handleMute = (e) => {
     let classNameVol = e.target.className
-    console.log(classNameVol)
-
-
+   
     if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
       setVolumeImg(mute)
       setUnmute("volumeOff")
@@ -79,12 +74,6 @@ function App() {
   }
 
 
-  const handleRadioChange = () => {
-    setPlayPause(pauseImg)
-    setBtnClass("PlayPause2")
-    setBtnClass2("playBtn2")
-  }
-
   const start = () => {
     playLiveStream(false)
     playLiveStream(true)
@@ -96,43 +85,8 @@ function App() {
     playLiveStream(false)
   }
 
-  const stopPlayingLastSong = () => {
-    let lastSongIndex = songIndex;
-    song[lastSongIndex].pause()
-  }
-
-  const nextSong = () => {
-    setSongIndex(songIndex + 1)
-    stopPlayingLastSong()
-    setSongChange(true)
-  }
-
-  const previousSong = () => {
-    setSongIndex(songIndex + -1)
-    setSongChange(true)
-    stopPlayingLastSong()
-  }
-
-  useEffect(() => {       //handle song change 
-
-  }, [songIndex])
-
-
-  useEffect(() => {       //handle song pause 
-
-  }, [song])
-
-
   const [video, setVideo] = useState(`//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1`)
-  const [radio, radioChange] = useState('')
 
-
-  const reloadVideo = () => {
-    let backGroundVideo = document.getElementById('vid');
-    backGroundVideo.pause();
-    backGroundVideo.load()
-    radioChange('Lofi')
-  }
 
 
   // <------------- Radio Change section -------------->
@@ -447,12 +401,16 @@ function App() {
       </div>
       <AdditionSettings youtube={youtubeChannal} radio={stationName} />
       <div class="videoContainer">
-        <iframe className='vid' src={video}
-          scrolling="no" mute='1' width="140%" height="140%" frameborder="0"
-          allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+          <ReactPlayer
+          className="vid"
+          width="140%" 
+          height="140%"
+          loop="true"
+          playing={livestream}
+          volume="mute"
+          url={video} />
       </div>
-
+ 
 
       <ReactPlayer
         className="liveStreamPlayer"

@@ -6,7 +6,7 @@ An app that allows you to browse different music channals all in one convient pl
 
 🏆 3rd place winner in Hack4Pan, a HackAThon with over 500 applicants. Presented to over 400+ live viewers and judged by the likes of [Ben Awad](https://www.youtube.com/c/BenAwad97) and [Matthew Pan](https://www.youtube.com/c/FryingPan)  
 
-## Preview - [Live Site](https://gallant-shockley-4b8705.netlify.app)
+## Preview - [Live Site](https://studybeatsfm.netlify.app/)
 
 <img width="1873" alt="Screen Shot 2022-01-23 at 12 32 28 AM" src="https://user-images.githubusercontent.com/56659226/150666323-e95a46f5-ad82-4ecf-b131-59155d8580ab.png">
 
@@ -35,5 +35,5 @@ Using [Figma](https://www.figma.com/) I created a wireframe and a flex box layou
 - [Framer Motion](https://www.framer.com/motion/)
 - [Youtube API](https://developers.google.com/youtube/v3)
 
-Live: https://gallant-shockley-4b8705.netlify.app
+Live: https://studybeatsfm.netlify.app/
 

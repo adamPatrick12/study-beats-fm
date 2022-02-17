@@ -1,9 +1,10 @@
 import './styles/index.css'
 import './styles/audioControl.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import AdditionSettings from './components/additionalInfo'
 import PauseImage from './components/pauseImage'
-import triangle from './images/playBtn.png'
+import Loading from './components/loadingImage'
+import RadioStations from './components/radioStation'
 import github from './images/github.png'
 import play from './images/playBtn.png'
 import pauseImg from './images/pause.png'
@@ -107,7 +108,7 @@ function App() {
     setVideo("//www.youtube.com/embed/hBGbt2CRDpA?autoplay=1&mute=1&start=1")
     setStationName("Ambient Renders")
     setYoutubeChannal('https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw')
-    setLivestream('https://www.youtube.com/watch?v=dIdb_BWkZq4&ab_channel=AmbientRenders')
+    setLivestream('https://www.youtube.com/watch?v=_H2sGS9Q2zA&ab_channel=AmbientRenders')
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
@@ -116,10 +117,10 @@ function App() {
   }
 
   const IvyRecords = () => {
-    setVideo("//www.youtube.com/embed/sDXy4xqKmA0?autoplay=1&mute=1&start=65")
+    setVideo("//www.youtube.com/embed/F1B9Fk_SgI0?autoplay=1&mute=1&start=10")
     setStationName("Ivy Records")
     setYoutubeChannal('https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg')
-    setLivestream('https://www.youtube.com/watch?v=_L6Cky3dgjI&ab_channel=IvyStationRecords')
+    setLivestream('https://www.youtube.com/watch?v=aOPGMcLvl6g&ab_channel=CHILLAF')
     playLiveStream(true)
     setPauseScreen("unpauseScreen")
     setPlayPause(pauseImg)
@@ -239,113 +240,24 @@ function App() {
 
         </div>
         <div className="radioStationsContainer">
-          <div className='radioList'>
+           
+        <RadioStations
+        Ambient={AmbientRenders}
+        Anime={animeVibe}
+        Astral={astralThrob}
+        ChillHop={ChillHiphop}
+        Cow={chilledCow}
+        Cloud={CloudHop}
+        Ivy={IvyRecords}
+        High={HFiveGOneFunc}
+        Lofi={LofiGirlVideo}
+        Study={StudyMD}
+        Jazz={theJazzHopCafe}
 
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={AmbientRenders}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              Ambient Renders
-            </motion.div>
+        
 
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={animeVibe}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              Anime Vibe
-            </motion.div>
+        />
 
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={astralThrob}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              Astral Throb
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={ChillHiphop}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              ChillHop Music
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={chilledCow}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              Chilled Cow
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={CloudHop}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              CloudHop Music
-            </motion.div>
-
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={IvyRecords}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              Ivy Records
-            </motion.div>
-
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={HFiveGOneFunc}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              H5G1 Music
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={LofiGirlVideo}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              <span> Lofi Girl </span>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={StudyMD}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              StudyMD
-            </motion.div>
-
-
-            <motion.div
-              whileHover={{ scale: 1.09 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={theJazzHopCafe}
-              className="station">
-              <img className="triangle" src={triangle} alt="" />
-              The Jazz Café
-            </motion.div>
-
-
-
-          </div>
         </div>
         <div className='socialsContainer2'>
           <div className='socials'>
@@ -418,14 +330,7 @@ function App() {
         volume={volume}
         url={currentLivestream} />
 
-      <div className='loading'>
-        <div class="container">
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <p>Loading...</p>
-        </div>
-      </div>
+      <Loading/>
 
 
     </div>

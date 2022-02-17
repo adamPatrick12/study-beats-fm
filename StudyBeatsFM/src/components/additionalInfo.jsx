@@ -30,16 +30,16 @@ const AdditionSettings = (props) => {
     Ocean.play()
     whiteNoise.play()
 
- 
+
     const setTransition = () => {
         setTransitionValue(0)
-    }    
+    }
 
-    setTimeout(function(){
+    setTimeout(function () {
         setTransitionValue(-450)     //Title Pop in and out
         setTitleLocation(420)
-      }, 2000);
-    
+    }, 2000);
+
     useEffect(() => {
         setTransition()
         setTitleLocation(1000)
@@ -49,24 +49,24 @@ const AdditionSettings = (props) => {
     return (
         <div className="infoContainer">
             <div className="time">
-               
+
             </div>
-            <div 
-            className="songName">
-          
-              <motion.div
-               animate={{ x: transitionValue }}
-               transition={{ delay: 1 }} 
-               className="radioStationTitle"
-               style = {{left: TitleLocation}}
-               >
-               {props.radio}
-               <div className="socialsContainer">           
-               <a href={props.youtube}> <img src={youtube} className="socialIcons" alt="" />         </a>    
-               </div>
-               </motion.div>
-              
-               
+            <div
+                className="songName">
+
+                <motion.div
+                    animate={{ x: transitionValue }}
+                    transition={{ delay: 1 }}
+                    className="radioStationTitle"
+                    style={{ left: TitleLocation }}
+                >
+                    {props.radio}
+                    <div className="socialsContainer">
+                        <a href={props.youtube}> <img src={youtube} className="socialIcons" alt="" />         </a>
+                    </div>
+                </motion.div>
+
+
             </div>
             <div className="otherSoundsContainer">
                 <div className="allign">

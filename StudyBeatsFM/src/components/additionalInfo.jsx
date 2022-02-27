@@ -62,7 +62,7 @@ const AdditionSettings = (props) => {
                 >
                     {props.radio}
                     <div className="socialsContainer">
-                        <a href={props.youtube}> <img src={youtube} className="socialIcons" alt="" />         </a>
+                        <a target="_blank" href={props.youtube}> <img src={youtube} className="socialIcons" alt="" />         </a>
                     </div>
                 </motion.div>
 

@@ -20,10 +20,9 @@ Using [Figma](https://www.figma.com/) I created a wireframe and a flex box layou
 
 ## Features ⭐ 
 
-- 11 unique music radios 
-- 100+ Songs
+- 12 unique music radios 
+- 1000+ Songs
 - Fully functional audio control 
-- Skip and go back previous tracks 
 - Slick UI
 - High quality audio 
 - Rain, Ocean and White noise dial

@@ -240,7 +240,7 @@ function App() {
 
   const NiceGuys = () => {
     setVideo("//www.youtube.com/embed/3n1aC2TYXIA?autoplay=1&mute=1&start=1");
-    setStationName("CloudHop");
+    setStationName("Nice Guys");
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCMmt12UKW571UWtJAgWkWqg"
     );
@@ -360,6 +360,7 @@ function App() {
         playing={livestream}
         volume={volume}
         url={currentLivestream}
+
       />
 
       <Loading />

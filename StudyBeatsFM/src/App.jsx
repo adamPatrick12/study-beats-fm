@@ -255,7 +255,7 @@ function App() {
   };
 
   const animeVibe = () => {
-    setVideo("//www.youtube.com/embed/zL1gMeoN8bI?autoplay=1&mute=1&start=42");
+    setVideo("//www.youtube.com/embed/5B7Rsw0L2r8?autoplay=1&mute=1&start=0");
     setStationName("AnimeVibe");
     setYoutubeChannal("https://www.youtube.com/c/AnimeVibe");
     setLivestream(

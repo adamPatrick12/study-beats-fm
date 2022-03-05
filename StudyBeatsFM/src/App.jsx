@@ -4,25 +4,19 @@ import { useState } from "react";
 import AdditionSettings from "./components/additionalInfo";
 import PauseImage from "./components/pauseImage";
 import Loading from "./components/loadingImage";
-import RadioStations from "./components/radioStation";
+import RadioStations from "./components/radioStations";
 import github from "./images/github.png";
 import play from "./images/playBtn.png";
+import AudioControls from "./components/audioControl";
 import pauseImg from "./images/pause.png";
-import volumeOn from "./images/volumeOn.png";
-import mute from "./images/mute.png";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
 
-let lastPlayedVolume = 0;
 
 function App() {
   const [BtnClass, setBtnClass] = useState("PlayPause"); //pause play change
   const [BtnClass2, setBtnClass2] = useState("playBtn");
   const [playPauseImg, setPlayPause] = useState(play);
-
-  const [muteCheck, setUnmute] = useState("volumeOn"); //unmute/mute change
-  const [muteCheck2, setUnmute2] = useState("audioOnImg");
-  const [volumeImg, setVolumeImg] = useState(volumeOn);
 
   const [livestream, playLiveStream] = useState(false);
   const [pauseScreen, setPauseScreen] = useState("pauseScreen");
@@ -32,7 +26,6 @@ function App() {
 
   const [stationName, setStationName] = useState("LofiGirl");
 
-  const [volume, setVolume] = useState(1);
 
   const [youtubeChannal, setYoutubeChannal] = useState("");
 
@@ -49,23 +42,6 @@ function App() {
       setBtnClass("PlayPause");
       setBtnClass2("playBtn");
       pause();
-    }
-  };
-
-  const handleMute = (e) => {
-    let classNameVol = e.target.className;
-
-    if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
-      setVolumeImg(mute);
-      setUnmute("volumeOff");
-      setUnmute2("audioOffImg");
-      lastPlayedVolume = volume;
-      setVolume(0);
-    } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
-      setVolumeImg(volumeOn);
-      setUnmute("volumeOn");
-      setUnmute2("audioOnImg");
-      setVolume(lastPlayedVolume);
     }
   };
 
@@ -125,7 +101,7 @@ function App() {
       "https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=aOPGMcLvl6g&ab_channel=CHILLAF"
+      "https://www.youtube.com/watch?v=aLqc8TdoLJ0"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -306,37 +282,14 @@ function App() {
         </div>
       </div>
       <div className="audioControlContainer">
-        <div className="audioControl">
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handlePausePlaySwitch}
-            className={BtnClass}
-          >
-            <img src={playPauseImg} className={BtnClass2} alt="" />
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.09 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handleMute}
-            className={muteCheck}
-          >
-            <img className={muteCheck2} src={volumeImg} alt="" />
-          </motion.div>
-          <div>
-            <input
-              className="volumeDial"
-              type="range"
-              min={0}
-              max={1}
-              value={volume}
-              step={0.01}
-              onChange={(event) => {
-                setVolume(event.target.valueAsNumber);
-              }}
-            />
-          </div>
-        </div>
+        <AudioControls
+        plauPause={handlePausePlaySwitch}
+        buttonClass={BtnClass}
+        playPauseImage={playPauseImg}
+        buttonClass2={BtnClass2}
+        LiveStreamAudio={currentLivestream}
+        LiveStreamPlayPause={livestream}
+        />
       </div>
       <div className={pauseScreen}>
         <PauseImage />
@@ -355,13 +308,7 @@ function App() {
         />
       </div>
 
-      <ReactPlayer
-        className="liveStreamPlayer"
-        playing={livestream}
-        volume={volume}
-        url={currentLivestream}
-
-      />
+      
 
       <Loading />
     </div>

@@ -85,7 +85,7 @@ function App() {
       "https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=pJH-j2CnwBY&ab_channel=RelaxingAmbienceASMR"
+      "https://www.youtube.com/watch?v=cJWEr-ti1_M&ab_channel=TheRelaxedGuy"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");

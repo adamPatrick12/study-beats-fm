@@ -198,14 +198,14 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const CloudHop = () => {
-    setVideo("//www.youtube.com/embed/70NcGd759Bc?autoplay=1&mute=1&start=1");
-    setStationName("CloudHop");
+  const Spinnin = () => {
+    setVideo("//www.youtube.com/embed/N65Jb683pXQ?autoplay=1&mute=1&start=0");
+    setStationName("Spinnin' Records");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UCWRqPtvnyVUS9zpADA-9oaw"
+      "https://www.youtube.com/channel/UCpDJl2EmP7Oh90Vylx0dZtA"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=kgx4WGK0oNU&ab_channel=%E9%98%BF%E9%B2%8DAbao"
+      "https://www.youtube.com/watch?v=N65Jb683pXQ&ab_channel=Spinnin%27Records"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -256,7 +256,7 @@ function App() {
             Astral={astralThrob}
             ChillHop={ChillHiphop}
             Cow={chilledCow}
-            Cloud={CloudHop}
+            Spinnin={Spinnin}
             Ivy={IvyRecords}
             High={HFiveGOneFunc}
             Lofi={LofiGirlVideo}

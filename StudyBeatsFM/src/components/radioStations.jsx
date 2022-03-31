@@ -8,7 +8,7 @@ const RadioStations = ({
   Astral,
   ChillHop,
   Cow,
-  Cloud,
+  Spinnin,
   Ivy,
   High,
   Lofi,
@@ -78,18 +78,6 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
-      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.55 }}>
-        <motion.div
-          whileHover={{ scale: 1.09 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={Cloud}
-          className="station"
-        >
-          <img className="triangle" src={triangle} alt="" />
-          CloudHop Music
-        </motion.div>
-      </motion.div>
-
       <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.65 }}>
         <motion.div
           whileHover={{ scale: 1.09 }}
@@ -135,6 +123,18 @@ const RadioStations = ({
         >
           <img className="triangle" src={triangle} alt="" />
           <span> Nice Guys </span>
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.55 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={Spinnin}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          Spinnin Records
         </motion.div>
       </motion.div>
 

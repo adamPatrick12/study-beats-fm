@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="videoContainer2">
             <ReactPlayer
               className="react-player"
-              url="https://www.youtube.com/watch?v=TGan48YE9Us&t=1309s&ab_channel=TheJazzHopCaf%C3%A9&start=40"
+              url="//www.youtube.com/embed/TGan48YE9Us?autoplay=1&mute=1&start=20"
               width="100%"
               height="100%"
               position="relative"
@@ -41,6 +41,18 @@ const Hero = () => {
             </Link>         
           </div>
         </div>
+        <ReactPlayer
+              className="react-player"
+              url="//www.youtube.com/embed/lf6refTxQs8?autoplay=1&mute=1&start=1"
+              width="0%"
+              height="0%"
+              position="absolute"
+              top="10000px"
+              left="1000px"
+              overflow="hidden"
+              playing={true}
+              loop={true}
+            />
       </div>
     )
 }

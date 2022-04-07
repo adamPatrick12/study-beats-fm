@@ -45,6 +45,8 @@ function App() {
     }
   };
 
+   
+
   const start = () => {
     playLiveStream(false);
     playLiveStream(true);
@@ -85,7 +87,7 @@ function App() {
       "https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=cJWEr-ti1_M&ab_channel=TheRelaxedGuy"
+      "https://www.youtube.com/watch?v=fHYWorZ9yho&ab_channel=PureRelaxingVibes"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -157,7 +159,7 @@ function App() {
   };
 
   const astralThrob = () => {
-    setVideo("//www.youtube.com/embed/dIf_ZQZCSoM?autoplay=1&mute=1&start=1");
+    setVideo("//www.youtube.com/embed/RJcIzUNKSQk?autoplay=1&mute=1&start=0");
     setStationName("Astral Throb");
     setYoutubeChannal("https://www.youtube.com/c/AstralThrob");
     setLivestream(

@@ -126,7 +126,7 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
-      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.55 }}>
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.95 }}>
         <motion.div
           whileHover={{ scale: 1.09 }}
           whileTap={{ scale: 0.9 }}
@@ -138,7 +138,7 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
-      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.95 }}>
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.05 }}>
         <motion.div
           whileHover={{ scale: 1.09 }}
           whileTap={{ scale: 0.9 }}
@@ -150,7 +150,7 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
-      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.05 }}>
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
         <motion.div
           whileHover={{ scale: 1.09 }}
           whileTap={{ scale: 0.9 }}

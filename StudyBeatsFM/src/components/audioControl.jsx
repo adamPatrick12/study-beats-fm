@@ -16,7 +16,6 @@ const AudioControls = ({
 }) => {
   const handleMute = (e) => {
     let classNameVol = e.target.className;
-    console.log(classNameVol);
     if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
       setVolumeImg(mute);
       setUnmute("volumeOff");
@@ -34,7 +33,7 @@ const AudioControls = ({
   const [muteCheck, setUnmute] = useState("volumeOn"); //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg");
   const [volumeImg, setVolumeImg] = useState(volumeOn);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(0.35);
 
   return (
     <div className="audioControl">

@@ -475,3 +475,19 @@ svg {
   0% { width: 0px; opacity: 1;}
   100% { width: 14px; opacity: 1;}
 }
+
+@media only screen and (max-width: 1189px) {
+  .station{
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .logo{
+    margin-left: 40px;
+  }
+
+  .link{
+    font-size: 12px;
+  }
+
+}

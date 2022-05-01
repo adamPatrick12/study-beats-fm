@@ -87,7 +87,7 @@ function App() {
       "https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=fHYWorZ9yho&ab_channel=PureRelaxingVibes"
+      "https://www.youtube.com/watch?v=GlEps1Ra06U&ab_channel=RelaxingAmbienceASMR"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -159,11 +159,11 @@ function App() {
   };
 
   const astralThrob = () => {
-    setVideo("//www.youtube.com/embed/RJcIzUNKSQk?autoplay=1&mute=1&start=0");
+    setVideo("//www.youtube.com/embed/RJcIzUNKSQk?autoplay=1&mute=1&start=1");
     setStationName("Astral Throb");
     setYoutubeChannal("https://www.youtube.com/c/AstralThrob");
     setLivestream(
-      "https://www.youtube.com/watch?v=xxgxkjV70Vc&ab_channel=NightrideFM"
+      "https://www.youtube.com/watch?v=UedTcufyrHc&ab_channel=NightrideFM"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");

@@ -12,7 +12,7 @@ const RadioStations = ({
   Ivy,
   High,
   Lofi,
-  Study,
+  Chill,
   Jazz,
   Nice
 }) => {
@@ -78,6 +78,18 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.55 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={Chill}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          ChillAF
+        </motion.div>
+      </motion.div>
+
       <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.65 }}>
         <motion.div
           whileHover={{ scale: 1.09 }}
@@ -135,18 +147,6 @@ const RadioStations = ({
         >
           <img className="triangle" src={triangle} alt="" />
           Spinnin Records
-        </motion.div>
-      </motion.div>
-
-      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.05 }}>
-        <motion.div
-          whileHover={{ scale: 1.09 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={Study}
-          className="station"
-        >
-          <img className="triangle" src={triangle} alt="" />
-          StudyMD
         </motion.div>
       </motion.div>
 

@@ -71,7 +71,7 @@ function App() {
       "https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl"
+      "https://www.youtube.com/watch?v=jfKfPfyJRdk&ab_channel=LofiGirl"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -142,14 +142,14 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const StudyMD = () => {
-    setVideo("//www.youtube.com/embed/PcxpLIv4CNU?autoplay=1&mute=1&start=1");
-    setStationName("StudyMD");
+  const ChillAF = () => {
+    setVideo("//www.youtube.com/embed/X9fH2VEFgwk?autoplay=1&mute=1&start=1");
+    setStationName("ChillAF");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UC5CRP-6oxYenIgBj17CkBZg"
+      "https://www.youtube.com/c/CHILLAF"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=uxR_sTZnBtg&ab_channel=StudyMD"
+      "https://www.youtube.com/watch?v=7bSlyM1allk&ab_channel=CHILLAF"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -262,7 +262,7 @@ function App() {
             Ivy={IvyRecords}
             High={HFiveGOneFunc}
             Lofi={LofiGirlVideo}
-            Study={StudyMD}
+            Chill={ChillAF}
             Jazz={theJazzHopCafe}
             Nice={NiceGuys}
           />

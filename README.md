@@ -1,4 +1,4 @@
-# StudyBeatsFM 🎶 - An online music player.  
+# HOÀNGMUSIC 🎶 - Nghe nhạc tai đây.  
 
 ## Overview
 

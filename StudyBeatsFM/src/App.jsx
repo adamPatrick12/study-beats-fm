@@ -11,7 +11,8 @@ import AudioControls from "./components/audioControl";
 import pauseImg from "./images/pause.png";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
-
+import { setActiveStation } from "./hooks/setActiveStation";
+import { useEffect } from "react";
 
 function App() {
   const [BtnClass, setBtnClass] = useState("PlayPause"); //pause play change
@@ -24,8 +25,9 @@ function App() {
     "https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl"
   );
 
-  const [stationName, setStationName] = useState("LofiGirl");
+  const [activeStation, setActiveStationState] = useState(false);
 
+  const [stationName, setStationName] = useState("LofiGirl");
 
   const [youtubeChannal, setYoutubeChannal] = useState("");
 
@@ -45,8 +47,6 @@ function App() {
     }
   };
 
-   
-
   const start = () => {
     playLiveStream(false);
     playLiveStream(true);
@@ -63,7 +63,6 @@ function App() {
   );
 
   // <------------- Radio Change section -------------->
-
   const LofiGirlVideo = () => {
     setVideo("//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1");
     setStationName("LofiGirl");
@@ -78,9 +77,10 @@ function App() {
     setPlayPause(pauseImg);
     setBtnClass("PlayPause2");
     setBtnClass2("playBtn2");
+    setActiveStationState(true);
   };
 
-  const AmbientRenders = () => {
+  const AmbientRenders = (e) => {
     setVideo("//www.youtube.com/embed/hBGbt2CRDpA?autoplay=1&mute=1&start=1");
     setStationName("Ambient Renders");
     setYoutubeChannal(
@@ -94,6 +94,8 @@ function App() {
     setPlayPause(pauseImg);
     setBtnClass("PlayPause2");
     setBtnClass2("playBtn2");
+    setActiveStation(e, stationName);
+    setActiveStationState(false);
   };
 
   const IvyRecords = () => {
@@ -102,9 +104,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg"
     );
-    setLivestream(
-      "https://www.youtube.com/watch?v=aLqc8TdoLJ0"
-    );
+    setLivestream("https://www.youtube.com/watch?v=aLqc8TdoLJ0");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -145,9 +145,7 @@ function App() {
   const ChillAF = () => {
     setVideo("//www.youtube.com/embed/X9fH2VEFgwk?autoplay=1&mute=1&start=1");
     setStationName("ChillAF");
-    setYoutubeChannal(
-      "https://www.youtube.com/c/CHILLAF"
-    );
+    setYoutubeChannal("https://www.youtube.com/c/CHILLAF");
     setLivestream(
       "https://www.youtube.com/watch?v=7bSlyM1allk&ab_channel=CHILLAF"
     );
@@ -177,7 +175,7 @@ function App() {
     setStationName("Chilled Cow");
     setYoutubeChannal("https://www.youtube.com/c/LofiGirl");
     setLivestream(
-      "https://www.youtube.com/watch?v=DWcJFNfaw9c&ab_channel=LofiGirl"
+      "https://www.youtube.com/watch?v=rUxyKA_-grg&ab_channel=LofiGirl"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -201,13 +199,13 @@ function App() {
   };
 
   const Spinnin = () => {
-    setVideo("//www.youtube.com/embed/N65Jb683pXQ?autoplay=1&mute=1&start=0");
+    setVideo("//www.youtube.com/embed/Oaq9uRxsJhQ?autoplay=1&mute=1&start=0");
     setStationName("Spinnin' Records");
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCpDJl2EmP7Oh90Vylx0dZtA"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=N65Jb683pXQ&ab_channel=Spinnin%27Records"
+      "https://www.youtube.com/watch?v=Oaq9uRxsJhQ&ab_channel=Spinnin'Records"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -232,7 +230,7 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const animeVibe = () => {
+  const animeVibe = (e) => {
     setVideo("//www.youtube.com/embed/5B7Rsw0L2r8?autoplay=1&mute=1&start=0");
     setStationName("AnimeVibe");
     setYoutubeChannal("https://www.youtube.com/c/AnimeVibe");
@@ -246,6 +244,19 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
+  const tokyoTones = () => {
+    setVideo("//www.youtube.com/embed/5wRWniH7rt8?autoplay=1&mute=1&start=50");
+    setStationName("TOKYO TONES");
+    setYoutubeChannal("https://www.youtube.com/@TokyoTones");
+    setLivestream(
+      "https://www.youtube.com/watch?v=Lcdi9O2XB4E&ab_channel=TOKYOTONES"
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
   return (
     <div className="interfaceContainer">
       <div className="radioContainer">
@@ -265,6 +276,8 @@ function App() {
             Chill={ChillAF}
             Jazz={theJazzHopCafe}
             Nice={NiceGuys}
+            Tokyo={tokyoTones}
+            StationName={stationName}
           />
         </div>
         <div className="socialsContainer2">
@@ -285,12 +298,12 @@ function App() {
       </div>
       <div className="audioControlContainer">
         <AudioControls
-        plauPause={handlePausePlaySwitch}
-        buttonClass={BtnClass}
-        playPauseImage={playPauseImg}
-        buttonClass2={BtnClass2}
-        LiveStreamAudio={currentLivestream}
-        LiveStreamPlayPause={livestream}
+          plauPause={handlePausePlaySwitch}
+          buttonClass={BtnClass}
+          playPauseImage={playPauseImg}
+          buttonClass2={BtnClass2}
+          LiveStreamAudio={currentLivestream}
+          LiveStreamPlayPause={livestream}
         />
       </div>
       <div className={pauseScreen}>
@@ -309,8 +322,6 @@ function App() {
           url={video}
         />
       </div>
-
-      
 
       <Loading />
     </div>

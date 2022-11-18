@@ -60,6 +60,8 @@ html, body {
   margin-right: 3px;
 }
 
+
+
 .socialsContainer2{
   color: white;
   width: 99%;
@@ -155,8 +157,24 @@ html, body {
   cursor: pointer;
 }
 
+.activeStation{
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 20px;
+  text-shadow: 1px 1px rgb(0 0 0 / 70%);
+
+}
+
+
 .station:hover{
   color: white;
+}
+
+.station:hover .triangle{
+  filter: invert(100%) sepia(0%) saturate(7483%) hue-rotate(39deg) brightness(100%) contrast(108%);
 }
 
 .triangle{
@@ -167,9 +185,13 @@ html, body {
   cursor:pointer;
 }
 
-
-
-
+.activeTriangle{
+  width: 12px;
+  height: 14px;
+  padding-right: 12px;
+  filter: invert(100%) sepia(0%) saturate(7483%) hue-rotate(39deg) brightness(100%) contrast(108%);
+  cursor:pointer;
+}
 
 .songName{
   min-width: 100%;

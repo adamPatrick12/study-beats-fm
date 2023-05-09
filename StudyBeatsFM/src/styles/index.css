@@ -33,12 +33,11 @@ html, body {
 }
 
 .radioStationsContainer{
-  width: 99%;
   height: 70%;
   box-shadow: 1px 0px 0 white;
   text-align: center;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   z-index: 1;
 }
 
@@ -165,7 +164,6 @@ html, body {
   text-transform: uppercase;
   margin-top: 20px;
   text-shadow: 1px 1px rgb(0 0 0 / 70%);
-
 }
 
 
@@ -512,4 +510,7 @@ svg {
     font-size: 12px;
   }
 
+  .activeStation{
+    font-size: 14px;
+}
 }

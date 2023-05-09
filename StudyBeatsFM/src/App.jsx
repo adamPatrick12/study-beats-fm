@@ -12,7 +12,6 @@ import pauseImg from "./images/pause.png";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
 import { setActiveStation } from "./hooks/setActiveStation";
-import { useEffect } from "react";
 
 function App() {
   const [BtnClass, setBtnClass] = useState("PlayPause"); //pause play change
@@ -104,7 +103,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg"
     );
-    setLivestream("https://www.youtube.com/watch?v=aLqc8TdoLJ0");
+    setLivestream("https://www.youtube.com/watch?v=05689ErDUdM");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -126,15 +125,11 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const HFiveGOneFunc = () => {
-    setVideo("//www.youtube.com/embed/lniKA4QHuxg?autoplay=1&mute=1&start=1");
-    setStationName("H5G1 Music");
-    setYoutubeChannal(
-      "https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g"
-    );
-    setLivestream(
-      "https://www.youtube.com/watch?v=-9gEgshJUuY&ab_channel=lofigeek"
-    );
+  const LofiBoy = () => {
+    setVideo("//www.youtube.com/embed/TlWYgGyNnJo?autoplay=1&mute=1&start=19");
+    setStationName("LofiBoy");
+    setYoutubeChannal("https://www.youtube.com/@LofiGirl");
+    setLivestream("https://www.youtube.com/watch?v=MVPTGNGiI-4");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -188,25 +183,7 @@ function App() {
     setVideo("//www.youtube.com/embed/U8HBZOTZrf0?autoplay=1&mute=1&start=1");
     setStationName("theJazz Cafe");
     setYoutubeChannal("https://www.youtube.com/c/TheJazzHopCaf%C3%A9");
-    setLivestream(
-      "https://www.youtube.com/watch?v=-5KAN9_CzSA&ab_channel=STEEZYASFUCK"
-    );
-    playLiveStream(true);
-    setPauseScreen("unpauseScreen");
-    setPlayPause(pauseImg);
-    setBtnClass("PlayPause2");
-    setBtnClass2("playBtn2");
-  };
-
-  const Spinnin = () => {
-    setVideo("//www.youtube.com/embed/Oaq9uRxsJhQ?autoplay=1&mute=1&start=0");
-    setStationName("Spinnin' Records");
-    setYoutubeChannal(
-      "https://www.youtube.com/channel/UCpDJl2EmP7Oh90Vylx0dZtA"
-    );
-    setLivestream(
-      "https://www.youtube.com/watch?v=Oaq9uRxsJhQ&ab_channel=Spinnin'Records"
-    );
+    setLivestream("https://www.youtube.com/watch?v=e3L1PIY1pN8");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -220,9 +197,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCMmt12UKW571UWtJAgWkWqg"
     );
-    setLivestream(
-      "https://www.youtube.com/watch?v=oVi5gtzTDx0&ab_channel=NiceGuys"
-    );
+    setLivestream("https://www.youtube.com/watch?v=Px7eVqqhbCU");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -234,9 +209,7 @@ function App() {
     setVideo("//www.youtube.com/embed/5B7Rsw0L2r8?autoplay=1&mute=1&start=0");
     setStationName("AnimeVibe");
     setYoutubeChannal("https://www.youtube.com/c/AnimeVibe");
-    setLivestream(
-      "https://www.youtube.com/watch?v=WDXPJWIgX-o&ab_channel=nostalgic"
-    );
+    setLivestream("https://www.youtube.com/watch?v=JWlKA9wmO64");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -269,9 +242,8 @@ function App() {
             Astral={astralThrob}
             ChillHop={ChillHiphop}
             Cow={chilledCow}
-            Spinnin={Spinnin}
             Ivy={IvyRecords}
-            High={HFiveGOneFunc}
+            Boy={LofiBoy}
             Lofi={LofiGirlVideo}
             Chill={ChillAF}
             Jazz={theJazzHopCafe}
@@ -322,8 +294,6 @@ function App() {
           url={video}
         />
       </div>
-
-      <Loading />
     </div>
   );
 }

@@ -9,9 +9,8 @@ const RadioStations = ({
   Astral,
   ChillHop,
   Cow,
-  Spinnin,
   Ivy,
-  High,
+  Boy,
   Lofi,
   Chill,
   Jazz,
@@ -193,23 +192,23 @@ const RadioStations = ({
         <motion.div
           whileHover={{ scale: 1.09 }}
           whileTap={{ scale: 0.9 }}
-          onClick={High}
+          onClick={Boy}
           className={
-            setActiveStation(StationName) === "H5G1 Music"
+            setActiveStation(StationName) === "LofiBoy"
               ? "activeStation"
               : "station"
           }
         >
           <img
             className={
-              setActiveStation(StationName) === "H5G1 Music"
+              setActiveStation(StationName) === "LofiBoy"
                 ? "activeTriangle"
                 : "triangle"
             }
             src={triangle}
             alt=""
           />
-          H5G1 Music
+          Lofi Boy
         </motion.div>
       </motion.div>
 
@@ -258,30 +257,6 @@ const RadioStations = ({
             alt=""
           />
           <span> Nice Guys </span>
-        </motion.div>
-      </motion.div>
-
-      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.95 }}>
-        <motion.div
-          whileHover={{ scale: 1.09 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={Spinnin}
-          className={
-            setActiveStation(StationName) === "Spinnin' Records"
-              ? "activeStation"
-              : "station"
-          }
-        >
-          <img
-            className={
-              setActiveStation(StationName) === "Spinnin' Records"
-                ? "activeTriangle"
-                : "triangle"
-            }
-            src={triangle}
-            alt=""
-          />
-          Spinnin Records
         </motion.div>
       </motion.div>
 

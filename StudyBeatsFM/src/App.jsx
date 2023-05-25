@@ -6,6 +6,7 @@ import PauseImage from "./components/pauseImage";
 import Loading from "./components/loadingImage";
 import RadioStations from "./components/radioStations";
 import github from "./images/github.png";
+import coffee from "./images/coffee.png";
 import play from "./images/playBtn.png";
 import AudioControls from "./components/audioControl";
 import pauseImg from "./images/pause.png";
@@ -255,7 +256,7 @@ function App() {
         <div className="socialsContainer2">
           <div className="socials">
             <motion.div
-              whileHover={{ scale: 1.09 }}
+              whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => {
                 window.open("https://github.com/adamPatrick12");
@@ -264,6 +265,17 @@ function App() {
             >
               <img className="githubLogo" src={github} alt="" />
               Github
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => {
+                window.open("https://www.buymeacoffee.com/adampatricX");
+              }}
+              className="link"
+            >
+              <img className="githubLogo" src={coffee} alt="" />
+              Buy Me a Coffee
             </motion.div>
           </div>
         </div>

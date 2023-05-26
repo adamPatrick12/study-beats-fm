@@ -77,8 +77,6 @@ justify-content:  center;
   z-index: 2;
 }
 
-
-
 .githubLogo{
     min-width: 17px;
     height: 17px;
@@ -91,7 +89,7 @@ justify-content:  center;
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .link2{
@@ -155,13 +153,14 @@ justify-content:  center;
 }
 
 .activeStation{
-  font-size: 18px;
+  font-size: 17px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
   margin-top: 20px;
   text-shadow: 1px 1px rgb(0 0 0 / 70%);
+  box-sizing: border-box;
 }
 
 

@@ -198,7 +198,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCMmt12UKW571UWtJAgWkWqg"
     );
-    setLivestream("https://www.youtube.com/watch?v=Px7eVqqhbCU");
+    setLivestream("https://www.youtube.com/watch?v=AS_x4uR87Kw");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);

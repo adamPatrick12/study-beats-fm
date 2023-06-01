@@ -17,6 +17,7 @@ const RadioStations = ({
   Nice,
   Tokyo,
   StationName,
+  College,
 }) => {
   return (
     <div className="radioList">
@@ -161,6 +162,30 @@ const RadioStations = ({
             alt=""
           />
           ChillAF
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.55 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={College}
+          className={
+            setActiveStation(StationName) === "College Music"
+              ? "activeStation"
+              : "station"
+          }
+        >
+          <img
+            className={
+              setActiveStation(StationName) === "College Music"
+                ? "activeTriangle"
+                : "triangle"
+            }
+            src={triangle}
+            alt=""
+          />
+          College Music
         </motion.div>
       </motion.div>
 

@@ -23,5 +23,7 @@ export const setActiveStation = (active) => {
     return "TOKYO TONES";
   } else if (active === "theJazz Cafe") {
     return "theJazz Cafe";
+  } else if (active === "College Music") {
+    return "College Music";
   }
 };

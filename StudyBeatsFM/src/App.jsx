@@ -198,7 +198,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCMmt12UKW571UWtJAgWkWqg"
     );
-    setLivestream("https://www.youtube.com/watch?v=Px7eVqqhbCU");
+    setLivestream("https://www.youtube.com/watch?v=AS_x4uR87Kw");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -211,6 +211,18 @@ function App() {
     setStationName("AnimeVibe");
     setYoutubeChannal("https://www.youtube.com/c/AnimeVibe");
     setLivestream("https://www.youtube.com/watch?v=JWlKA9wmO64");
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
+  const collegeMusic = (e) => {
+    setVideo("//www.youtube.com/embed/epaP2LCCuVE?autoplay=1&mute=1&start=0");
+    setStationName("College Music");
+    setYoutubeChannal("https://www.youtube.com/@CollegeMusic");
+    setLivestream("https://www.youtube.com/watch?v=epaP2LCCuVE");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -240,6 +252,7 @@ function App() {
             Ambient={AmbientRenders}
             Anime={animeVibe}
             Astral={astralThrob}
+            College={collegeMusic}
             ChillHop={ChillHiphop}
             Cow={chilledCow}
             Ivy={IvyRecords}

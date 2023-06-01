@@ -198,7 +198,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCMmt12UKW571UWtJAgWkWqg"
     );
-    setLivestream("https://www.youtube.com/watch?v=AS_x4uR87Kw");
+    setLivestream("https://www.youtube.com/watch?v=Px7eVqqhbCU");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -235,7 +235,6 @@ function App() {
     <div className="interfaceContainer">
       <div className="radioContainer">
         <div className="logo">StudyBeats</div>
-        <div className="subHeading"></div>
         <div className="radioStationsContainer">
           <RadioStations
             Ambient={AmbientRenders}

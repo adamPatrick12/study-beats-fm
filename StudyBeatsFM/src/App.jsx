@@ -87,7 +87,7 @@ function App() {
       "https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=GlEps1Ra06U&ab_channel=RelaxingAmbienceASMR"
+      "https://www.youtube.com/watch?v=CoP5wLD9clU&ab_channel=AmbientRenders"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -130,7 +130,9 @@ function App() {
     setVideo("//www.youtube.com/embed/TlWYgGyNnJo?autoplay=1&mute=1&start=19");
     setStationName("LofiBoy");
     setYoutubeChannal("https://www.youtube.com/@LofiGirl");
-    setLivestream("https://www.youtube.com/watch?v=MVPTGNGiI-4");
+    setLivestream(
+      "https://www.youtube.com/watch?v=4xDzrJKXOOY&ab_channel=LofiGirl"
+    );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);

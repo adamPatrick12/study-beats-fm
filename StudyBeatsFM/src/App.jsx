@@ -3,7 +3,6 @@ import "./styles/audioControl.css";
 import { useState } from "react";
 import AdditionSettings from "./components/additionalInfo";
 import PauseImage from "./components/pauseImage";
-import Loading from "./components/loadingImage";
 import RadioStations from "./components/radioStations";
 import github from "./images/github.png";
 import coffee from "./images/coffee.png";
@@ -104,7 +103,7 @@ function App() {
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg"
     );
-    setLivestream("https://www.youtube.com/watch?v=05689ErDUdM");
+    setLivestream("https://www.youtube.com/watch?v=0DztVOeomsk&ab");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -145,7 +144,7 @@ function App() {
     setStationName("ChillAF");
     setYoutubeChannal("https://www.youtube.com/c/CHILLAF");
     setLivestream(
-      "https://www.youtube.com/watch?v=7bSlyM1allk&ab_channel=CHILLAF"
+      "https://www.youtube.com/watch?v=_VsfjvBakqE&ab_channel=CHILLAF"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -186,7 +185,7 @@ function App() {
     setVideo("//www.youtube.com/embed/U8HBZOTZrf0?autoplay=1&mute=1&start=1");
     setStationName("theJazz Cafe");
     setYoutubeChannal("https://www.youtube.com/c/TheJazzHopCaf%C3%A9");
-    setLivestream("https://www.youtube.com/watch?v=e3L1PIY1pN8");
+    setLivestream("https://www.youtube.com/watch?v=a75Fe1huS7M");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
@@ -221,10 +220,12 @@ function App() {
   };
 
   const collegeMusic = (e) => {
-    setVideo("//www.youtube.com/embed/epaP2LCCuVE?autoplay=1&mute=1&start=0");
+    setVideo(
+      "//www.youtube.com/embed/gtzOKTpwLvY?si=wSm9LyIidCsLm87n?autoplay=1&mute=1&start=0"
+    );
     setStationName("College Music");
     setYoutubeChannal("https://www.youtube.com/@CollegeMusic");
-    setLivestream("https://www.youtube.com/watch?v=epaP2LCCuVE");
+    setLivestream("https://www.youtube.com/watch?v=gtzOKTpwLvY&ab");
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
     setPlayPause(pauseImg);
